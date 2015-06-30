@@ -19,7 +19,9 @@
  * @return array
  */
 function of_filter_save_media_upload($data) {
-
+	
+	if (is_array($data) || is_object($data))
+	{
     foreach ($data as $key => $value) {
         if (is_string($value)) {
             $data[$key] = str_replace(
@@ -35,6 +37,8 @@ function of_filter_save_media_upload($data) {
             );
         }
     }
+	
+	}
 
     return $data;
 }

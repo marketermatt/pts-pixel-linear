@@ -413,6 +413,7 @@ class Options_Machine {
 					}			
 					$output .= '</ul>';
 					$output .= '<a href="#" class="button slide_add_button">Add New Slide</a></div>';
+					$output .= '<div class="img_error"></div>';
 					
 				break;
 				

@@ -412,3 +412,18 @@ bt { font-size: 12px; }
 @media only screen and (max-width: 340px){
 	#pixi-slider{ height: 170px;} 
 }
+/*hover class*/
+.navbar-nav li:hover ul.dropdown-menu{
+    display:block !important;
+}
+.navbar-nav li ul.dropdown-menu li ul.dropdown-menu{
+    display:none !important;
+}
+.navbar-nav li ul.dropdown-menu li:hover ul.dropdown-menu{
+    display:block !important;
+	top: 0px;
+	left: 100%;
+}
+.textwidget iframe,.textwidget img {
+  max-width: 100% !important;
+}

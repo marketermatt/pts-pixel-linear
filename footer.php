@@ -74,33 +74,35 @@
 <div class="container">
 
       <div class="row">
-      
-      	<div class="col-sm-3">
-
-          <?php dynamic_sidebar('footer-col1'); ?>
-
-        </div>
-
-        <div class="col-sm-3">
-
-          <?php dynamic_sidebar('footer-col2'); ?>
-
-        </div>
-
-        <div class="col-sm-3">
-
-          <?php dynamic_sidebar('footer-col3'); ?>
-
-        </div>
-
-        <div class="col-sm-3">
-
-          <?php dynamic_sidebar('footer-col4'); ?>
-
-        </div>
-
-      
-
+		<?php if ( is_active_sidebar( 'footer-col1' ) || is_active_sidebar( 'footer-col2' ) || is_active_sidebar( 'footer-col3' ) || is_active_sidebar( 'footer-col4' ) ) : ?>
+		<?php $count = 0;
+		if ( is_active_sidebar('footer-col1') ) : $count++; endif; 
+		if ( is_active_sidebar('footer-col2') ) : $count++; endif; 
+		if ( is_active_sidebar('footer-col3') ) : $count++; endif; 
+		if ( is_active_sidebar('footer-col4') ) : $count++; endif;
+		$row = 'col-sm-'. 12/$count;
+		endif;
+		?>
+      	<?php if ( is_active_sidebar('footer-col1') ) : ?>
+                <div class="<?php echo $row; ?>">
+				<?php dynamic_sidebar('footer-col1'); ?>
+				</div>
+		<?php endif; ?>
+        <?php if ( is_active_sidebar('footer-col2') ) : ?>
+				<div class="<?php echo $row; ?>">
+				<?php dynamic_sidebar('footer-col2'); ?>
+				</div>
+		<?php endif; ?>
+		<?php if ( is_active_sidebar('footer-col3') ) : ?>
+                <div class="<?php echo $row; ?>">
+				<?php dynamic_sidebar('footer-col3'); ?>
+				</div>
+		<?php endif; ?>
+		<?php if ( is_active_sidebar('footer-col4') ) : ?>
+                <div class="<?php echo $row; ?>">
+        <?php dynamic_sidebar('footer-col4'); ?>
+				</div>
+		<?php endif; ?>
       </div><!-- /row -->
 
     </div><!-- /container -->
@@ -126,7 +128,7 @@
         	<?php if( bi_get_data('custom_copy_info') !== '' ) { ?>
             	<p><?php echo bi_get_data('custom_copy_info'); ?></p>
             <?php } else { ?>
-                <p>Copyright &copy; 2014 Pixel Theme Studio. All rights reserved.</p>
+                <p>Copyright &copy; 2015 Pixel Theme Studio. All rights reserved.</p>
             <?php  } ?>
 		</div>
     </div>

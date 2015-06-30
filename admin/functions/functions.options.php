@@ -1450,7 +1450,7 @@ if (!function_exists('of_options'))
 			"type" 	=> "info");
         
 		$of_options[] = array( "name"	=> __( 'Favicon', 'gents' ),
-			"desc"	=> __( 'Upload or past the URL for your custom favicon.', 'gents' ),
+			"desc"	=> __( 'Upload or paste the URL for your custom favicon.', 'gents' ),
 			"id"	=> "custom_favicon",
 			"std"	=> "",
 			"type"	=> "media");
@@ -1479,7 +1479,13 @@ if (!function_exists('of_options'))
 			"options" => array("No Sidebar" => "No Sidebar", "Left Sidebar" => "Left Sidebar","Right Sidebar" => "Right Sidebar","Left + Right Sidebar" => "Left + Right Sidebar"),
 			);
 		
-		
+		$of_options[] = array( "name"	=> __( 'Single Post Layout', 'gents' ),
+			"desc"	=> __('Select layout for Single Post View with left, right Sidebar. Use widgets to add contents on sidebars', 'gents' ),
+			"id"	=> "custom_single_post_layout",
+			"std"	=> "No Sidebar",
+			"type"	=> "select",
+			"options" => array("No Sidebar" => "No Sidebar", "Left Sidebar" => "Left Sidebar","Right Sidebar" => "Right Sidebar","Left + Right Sidebar" => "Left + Right Sidebar"),
+			);
 		
 
 		// Home Settings
@@ -1496,15 +1502,15 @@ if (!function_exists('of_options'))
 			);
 			
 		$of_options[] = array( "name"	=> __( 'Slider Options', 'gents' ),
-			"desc"	=> __( 'Unlimited slider with drag and drop sortings.', 'gents' ),
+			"desc"	=> __( 'Unlimited slider with drag and drop sortings. (Recommended size xpx x ypx)', 'gents' ),
 			"id"	=> "custom_slider",
 			"std" 		=> "",
 			"type"	=> "slider",
 			);
 			
 		
-		$of_options[] = array( "name"	=> __( 'Enable 3 Box On Homepage', 'gents' ),
-			"desc"	=> __( 'Use widgets to add content in 3 boxex', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Enable 3 Boxes On Homepage', 'gents' ),
+			"desc"	=> __( 'Use widgets to add content in 3 boxes', 'gents' ),
 			"id"	=> "enable_disable_3box",
 			"std" 		=> 0,
 			"on"	=> __( 'Enable', 'gents' ),
@@ -1712,7 +1718,7 @@ if (!function_exists('of_options'))
 		$of_options[] = array( "name"	=> __( 'Copyright Text', 'gents' ),
 			"desc"	=> __( 'Copyright information goes here','gents' ),
 			"id"	=> "custom_copy_info",
-			"std" => "Copyright &copy; 2014 Pixel Theme Studio. All rights reserved.",
+			"std" => "Copyright &copy; 2015 Pixel Theme Studio. All rights reserved.",
 			"type"	=> "textarea",
 			);
 			

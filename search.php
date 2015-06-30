@@ -85,7 +85,7 @@
 
        <article id="post-not-found" class="hentry clearfix">
         <header>
-           <h1 class="title-404"><?php _e('404 &#8212; Fancy meeting you here!', 'gents'); ?></h1>
+           <h1 class="title-404"><?php _e('Fancy meeting you here!', 'gents'); ?></h1>
        </header>
        <section>
            <p><?php _e('Don&#39;t panic, we&#39;ll get through this together. Let&#39;s explore our options here.', 'gents'); ?></p>

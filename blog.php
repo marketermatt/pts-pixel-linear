@@ -86,9 +86,11 @@
     
                       <?php the_content(); ?>
                   </div>
-                  <footer class="col-sm-12 post-footer">
-                    <bd>Tag's :</bd> <?php echo the_tags("", " | ", " ."); ?>
+                  <?php if(has_tag()) { ?>
+                  <footer class="col-sm-12 post-footer">  
+                    <bd>Tags :</bd> <?php ; echo the_tags("", " | ", ""); ?>
                   </footer>
+                  <?php } ?>
                   <div class="clearfix"></div>
 
                   <?php custom_link_pages(array(

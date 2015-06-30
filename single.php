@@ -26,7 +26,29 @@
     <div id="white">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
+		<?php 
+  	if( bi_get_data('custom_single_post_layout') == 'No Sidebar' ){
+  		$colside = "0";
+		$colmain = "12";
+	}elseif(bi_get_data('custom_single_post_layout') == 'Left Sidebar'){
+		$colside = "3";
+		$colmain = "9";
+	}elseif(bi_get_data('custom_single_post_layout') == 'Right Sidebar'){
+		$colside = "3";
+		$colmain = "9";
+	}elseif(bi_get_data('custom_single_post_layout') == 'Left + Right Sidebar'){
+		$colside = "3";
+		$colmain = "6";
+	}
+  ?>
+  
+
+  <?php if ( bi_get_data('custom_single_post_layout') == 'Left Sidebar' || bi_get_data('custom_single_post_layout') == 'Left + Right Sidebar' ) { ?>
+      <div class="col-sm-<?php echo $colside; ?>">
+            <?php dynamic_sidebar('left-sidebar'); ?>
+    </div><!-- col left -->
+  <?php } ?>
+          <div class="col-sm-<?php echo $colmain; ?>">
 
            <section class="post-meta">  
                   <a href="<?php echo post_permalink() ?>">
@@ -81,6 +103,11 @@
 
 
                         </div>
+	<?php if ( bi_get_data('custom_single_post_layout') == 'Right Sidebar' || bi_get_data('custom_single_post_layout') == 'Left + Right Sidebar' ) { ?>
+                <div class="col-sm-<?php echo $colside; ?>">
+                        <?php dynamic_sidebar('right-sidebar'); ?>
+                </div> <!-- col right -->
+    <?php } ?>
                       </div>
                     </div>
                   </div>

@@ -163,7 +163,7 @@ header .navbar-inverse{
 	  		   if(!empty($top_nav['top-bar'])){
 				  $args = array(
 					  'theme_location' => 'top-bar',
-					  'depth'      => 2,
+					  'depth'      => 3,
 					  'container'  => false,
 					  'menu_class'     => 'nav navbar-nav navbar-right',
 					  'walker'     => new Bootstrap_Walker_Nav_Menu()
@@ -191,7 +191,7 @@ header .navbar-inverse{
         	
                 $args_snav = array(
                     'theme_location' => 'secondary-nav-bar',
-                    'depth'      => 2,
+                    'depth'      => 3,
                     'container'  => false,
                     'menu_class'     => 'nav navbar-nav navbar-left',
                     'walker'     => new Bootstrap_Walker_Nav_Menu()
@@ -235,26 +235,33 @@ header .navbar-inverse{
     
             <!-- Wrapper for Slides -->
             <div class="carousel-inner">
-                <?php $iCnt=0; foreach( $pixslider as $slide ) { 
+                <?php $iCnt=0; foreach( $pixslider as $slide ) {
+				if($slide['link']==""){$slide['link']="#";}
 				 if($iCnt=='0'){ $addAct = "active"; }else{$addAct = "";}
                     echo (
                         "<div class='item ". $addAct ."'>
-                        	<div class='fill' style='background-image:url(". $slide['url'] .");'></div>
+                        	<a href=". $slide['link'] .">
+							<div class='fill' style='background-image:url(". $slide['url'] .");'></div>
+							</a>
                         	<div class='carousel-caption'>
+								<h3>".$slide['title']."</h3>
                             	<p>".$slide['description']."</p>
                         	</div>
                     	</div>"
                     );
-                $iCnt++; }?>
+                $iCnt++; }
+				?>
             </div>
     
             <!-- Controls -->
+			<?php if($slide['order']>1){?>
             <a class="left carousel-control" href="#pixi-slider" data-slide="prev">
                 <span class="icon-prev"></span>
             </a>
             <a class="right carousel-control" href="#pixi-slider" data-slide="next">
                 <span class="icon-next"></span>
             </a>
+			<?php }else{}?>
     </section>
     <!-- slider ends -->
     <?php } ?>

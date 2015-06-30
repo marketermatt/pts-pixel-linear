@@ -415,9 +415,20 @@ jQuery(document).ready(function($){
 	
 	/** AJAX Save Options */
 	$('#of_save').live('click',function() {
-			
 		var nonce = $('#security').val();
-					
+			
+		var className = $('.cb-enable, .selected').attr('class');
+			
+		var count_image=0;
+        $(".slide_body .upload").each(function(){
+        count_image = count_image+($.trim($(this).val())=="" ? 1 : 0);
+        });
+		
+		if(count_image>0 && className == 'cb-enable selected') {
+        $('.img_error').html("One or more slides are missing image(s)");
+		return false;
+		}
+							
 		$('.ajax-loading-img').fadeIn();
 		
 		//get serialized data from all our option fields			
@@ -448,8 +459,7 @@ jQuery(document).ready(function($){
 			}, 2000);
 		});
 			
-	return false; 
-					
+	return false;
 	});   
 	
 	

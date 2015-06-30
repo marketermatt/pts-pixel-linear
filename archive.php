@@ -46,7 +46,7 @@
                   </section><!-- end of .post-meta -->
 
                   <header>
-                    <h4 class="post-title"><?php the_title(); ?></h4>
+                    <h4 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                   </header>
                   <section class="post-entry">
                     <?php if ( has_post_thumbnail()) : ?>
