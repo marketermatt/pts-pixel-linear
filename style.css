@@ -267,6 +267,12 @@ article.post{ margin-bottom:50px;}
     background-size: cover;
     -o-background-size: cover;
 }
+.item.active.left h1 {display:none;}
+.carousel-caption h1 {margin-bottom:10px}
+.carousel-caption p {font-size: 20px;
+  color: #36454f;
+  font-weight: bold;}
+
 
 /* Three Box */
 #box-wrap{ background:#f9f9f9;}
