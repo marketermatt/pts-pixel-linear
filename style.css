@@ -267,7 +267,8 @@ article.post{ margin-bottom:50px;}
     background-size: cover;
     -o-background-size: cover;
 }
-.item.active.left h1 {display:none;}
+.item.active.left h1, .item.active.left h3, .item.active.left p, .item.active.left h2 {display:none;}
+
 .carousel-caption h1 {margin-bottom:10px}
 .carousel-caption p {font-size: 20px;
   color: #36454f;
