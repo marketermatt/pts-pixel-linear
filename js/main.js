@@ -44,3 +44,8 @@ jQuery(function(){
   
 
 });
+
+jQuery(document).ready(function(){
+    // Activate carousel
+    jQuery("#pixi-slider").carousel();
+})
