@@ -1545,7 +1545,14 @@ if (!function_exists('of_options'))
 			"id"	=> "custom_footer_bg",
 			"std"	=> "#333",
 			"type"	=> "color",
-			);	
+			);
+
+		$of_options[] = array( "name"	=> __( 'Footer Bottom Background Color', 'gents' ),
+			"desc"	=> __( 'Pick a background color for footer copyright<br>(default: #000).', 'gents' ),
+			"id"	=> "custom_bottom_footer_bg",
+			"std"	=> "#000",
+			"type"	=> "color",
+			);
 			
 		$of_options[] = array( "name"	=> __( 'Box Layout Background Color', 'gents' ),
 			"desc"	=> __( 'Pick a background color for box layout.<br>*Apply only when box layout is selected.(default: #ddd).', 'gents' ),

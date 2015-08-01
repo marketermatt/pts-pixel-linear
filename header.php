@@ -99,6 +99,11 @@ header .navbar-inverse{
 		background-color: <?php echo bi_get_data('custom_footer_bg'); ?>;
 	<?php } ?>
 }
+#socket{
+	<?php if( bi_get_data('custom_bottom_footer_bg') != '' ) { ?>
+		background-color: <?php echo bi_get_data('custom_bottom_footer_bg'); ?>;
+	<?php } ?>
+}
 
 /* Typography */
 <?php $optn_typo = bi_get_data("custom_body_font"); ?>
@@ -225,6 +230,7 @@ header .navbar-inverse{
     
     <?php if( bi_get_data('enable_disable_slider') == '1' || $enable_disable_slider == 'on'  ) { $pixslider = bi_get_data('custom_slider'); ?>
     <!-- slider -->
+     <?php if($pixslider[1]['url']!=""){ ?>
     <section id="pixi-slider" class="carousel slide">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -264,7 +270,8 @@ header .navbar-inverse{
 			<?php }else{}?>
     </section>
     <!-- slider ends -->
-    <?php } ?>
+    <?php }
+	} ?>
     
 
 
