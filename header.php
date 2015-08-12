@@ -228,7 +228,7 @@ header .navbar-inverse{
 	$enable_disable_slider = get_post_meta( $post->ID, '_cmb_enable_disable_slider', true );
 	?>
     
-    <?php if( bi_get_data('enable_disable_slider') == '1' || $enable_disable_slider == 'on'  ) { $pixslider = bi_get_data('custom_slider'); ?>
+    <?php if( (is_front_page() && bi_get_data('enable_disable_slider') == '1') || (is_page() && $enable_disable_slider == 'on' && bi_get_data('enable_disable_slider') == '1') ) { $pixslider = bi_get_data('custom_slider'); ?>
     <!-- slider -->
      <?php if($pixslider[1]['url']!=""){ ?>
     <section id="pixi-slider" class="carousel slide">
