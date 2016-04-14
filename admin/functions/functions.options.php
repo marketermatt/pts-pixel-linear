@@ -1747,7 +1747,7 @@ if (!function_exists('of_options'))
 			"std"	=> "",
 			"type"	=> "textarea");
 			
-	
+	/*
 
 	   // Backup Options
 		$of_options[] = array( 	"name" 		=> "Backup Options",
@@ -1766,7 +1766,7 @@ if (!function_exists('of_options'))
 			"std" 		=> "",
 			"type" 		=> "transfer",
 			"desc" 		=> 'You can tranfer the saved options data between different installs by copying the text inside the text box. To import data from another install, replace the data in the text box with the one from another install and click "Import Options".',
-			);
+			); */
 
 	}//End function: of_options()
 }//End chack if function exists: of_options()

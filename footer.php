@@ -114,13 +114,13 @@
 <div class="container">
 	<div class="row">
     	<div class="col-sm-6">
-        	<?php if( bi_get_data('custom_footer_logo') !== '' ) { ?>
+        	<?php if( empty(bi_get_data('custom_footer_logo')['url']) ) { ?>
             	<a href="<?php echo home_url(); ?>">
-            	<img src="<?php echo bi_get_data('custom_footer_logo'); ?>" alt="<?php bloginfo( 'name' ) ?>" />
+            	<img src="<?php echo get_template_directory_uri()."/images/footer-logo.png"; ?>" alt="<?php bloginfo( 'name' ) ?>" />
                 </a>
             <?php } else { ?>
             	<a href="<?php echo home_url(); ?>">
-                <img src="<?php echo get_template_directory_uri()."/images/footer-logo.png"; ?>" alt="<?php bloginfo( 'name' ) ?>" />
+                <img src="<?php echo bi_get_data('custom_footer_logo')['url']; ?>" alt="<?php bloginfo( 'name' ) ?>" />
                 </a>
             <?php  } ?>
 		</div>

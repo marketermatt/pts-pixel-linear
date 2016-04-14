@@ -54,7 +54,7 @@ function optionsframework_admin_init()
  */
 function optionsframework_add_admin() {
 	
-    $of_page = add_theme_page( THEMENAME, 'Theme Options', 'edit_theme_options', 'optionsframework', 'optionsframework_options_page');
+    $of_page = add_theme_page( THEMENAME, 'edit_theme_options', 'optionsframework', 'optionsframework_options_page');
 
 	// Add framework functionaily to the head individually
 	add_action("admin_print_scripts-$of_page", 'of_load_only');
@@ -80,7 +80,7 @@ function optionsframework_options_page(){
 
 	*/	
 	
-	include_once( ADMIN_PATH . 'front-end/options.php' );
+	//include_once( ADMIN_PATH . 'front-end/options.php' );
 
 }
 

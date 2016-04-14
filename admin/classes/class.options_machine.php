@@ -65,8 +65,11 @@ class Options_Machine {
 	 */
 	public static function optionsframework_machine($options) {
 		global $smof_output;
-	    $smof_data = of_get_options();
+	    //$smof_data = of_get_options();
+		global $pixel_linear_options;
+		$smof_data = $pixel_linear_options;
 		$data = $smof_data;
+		
 
 		$defaults = array();   
 	    $counter = 0;
@@ -655,7 +658,8 @@ class Options_Machine {
 					
 					$u_val = '';
 					if($smof_data[$value['id']]){
-						$u_val = stripslashes($smof_data[$value['id']]);
+						//$u_val = stripslashes($smof_data[$value['id']]);
+						$u_val = $smof_data[$value['id']];
 					}
 
 					$output .= Options_Machine::optionsframework_media_uploader_function($value['id'],$u_val, $value['mod']);
@@ -720,6 +724,10 @@ class Options_Machine {
 
 	    $data = of_get_options();
 	    $smof_data = of_get_options();
+		
+		global $pixel_linear_options;
+		$smof_data = $pixel_linear_options;
+		$data = $pixel_linear_options;	
 		
 		$uploader = '';
 	    $upload = $smof_data[$id];

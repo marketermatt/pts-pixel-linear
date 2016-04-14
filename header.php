@@ -23,8 +23,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 <title><?php wp_title('&#124;', true, 'right'); ?></title>
-<?php if( bi_get_data('custom_favicon') !== '' ) : ?>
-        <link rel="icon" type="image/png" href="<?php echo bi_get_data('custom_favicon'); ?>" />
+<?php if( !empty(bi_get_data('custom_favicon')['url']) ) : ?>
+        <link rel="icon" type="image/png" href="<?php echo bi_get_data('custom_favicon')['url']; ?>" />
     <?php endif; ?>
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -60,8 +60,8 @@ body{
 	<?php if( bi_get_data('custom_boxed_bg') != '' ) { ?>
 		background-color: <?php echo bi_get_data('custom_boxed_bg'); ?>;
 	<?php } ?>
-	<?php if( bi_get_data('custom_boxed_bgImg') != '' ) { ?>
-		background-image: url('<?php echo bi_get_data('custom_boxed_bgImg'); ?>');
+	<?php if( !empty(bi_get_data('custom_boxed_bgImg')['url']) ) { ?>
+		background-image: url('<?php echo bi_get_data('custom_boxed_bgImg')['url']; ?>');
 		background-position:center top;
 	<?php } ?>	
 }
@@ -108,11 +108,23 @@ header .navbar-inverse{
 /* Typography */
 <?php $optn_typo = bi_get_data("custom_body_font"); ?>
 #wrapper p{ 
-	<?php if( $optn_typo['size'] != '' ) { ?>
-		font-size: <?php echo $optn_typo['size']; ?>;
+	<?php if( $optn_typo['font-family'] != '' ) { ?>
+		font-family: <?php echo $optn_typo['font-family']; ?>;
 	<?php } ?>
-	<?php if( $optn_typo['style'] != '' ) { ?>
-		font-style: <?php echo $optn_typo['style']; ?>;
+	<?php if( $optn_typo['font-weight'] != '' ) { ?>
+		font-weight: <?php echo $optn_typo['font-weight']; ?>;
+	<?php } ?>
+	<?php if( $optn_typo['font-style'] != '' ) { ?>
+		font-style: <?php echo $optn_typo['font-style']; ?>;
+	<?php } ?>
+	<?php if( $optn_typo['text-align'] != '' ) { ?>
+		text-align: <?php echo $optn_typo['text-align']; ?>;
+	<?php } ?>
+	<?php if( $optn_typo['font-size'] != '' ) { ?>
+		font-size: <?php echo $optn_typo['font-size']; ?>;
+	<?php } ?>
+	<?php if( $optn_typo['line-height'] != '' ) { ?>
+		line-height: <?php echo $optn_typo['line-height']; ?>;
 		
 	<?php } ?>
 	<?php if( $optn_typo['color'] != '' ) { ?>
@@ -121,10 +133,11 @@ header .navbar-inverse{
 }
 </style>
 
-
 </head>
 
 <body <?php body_class(); ?>>
+<?php //global $pixel_linear_options; print_r($pixel_linear_options);
+//echo bi_get_data('custom_main_layout'); ?>
           
 <?php gents_container(); // before container hook ?>
 
@@ -147,9 +160,9 @@ header .navbar-inverse{
               <span class="icon-bar"></span>
             </button>
 
-            <?php if( bi_get_data('custom_logo') != '' ) { ?>
+            <?php if( !empty(bi_get_data('custom_logo')['url']) ) { ?>
             <div id="logo"><a href="<?php echo home_url(); ?>/" title="<?php bloginfo( 'name' ); ?>" rel="home">
-                <img src="<?php echo bi_get_data('custom_logo'); ?>" alt="<?php bloginfo( 'name' ) ?>" />
+                <img src="<?php echo bi_get_data('custom_logo')['url']; ?>" alt="<?php bloginfo( 'name' ) ?>" />
             </a></div>
             <?php } else { ?>
             <?php if (is_front_page()) { ?>
@@ -161,6 +174,9 @@ header .navbar-inverse{
                 <img src="<?php echo get_template_directory_uri()."/images/logo.png"; ?>" alt="<?php bloginfo( 'name' ) ?>" />
             </a></div>
             <?php } } ?>
+			<?php if( bi_get_data('logo_tagline') != '' ) { ?>
+				<div id="logo_tagline"><?php echo bi_get_data('logo_tagline');?></div>
+			<?php } ?>
         </div>
           <div class="navbar-collapse collapse navbar-responsive-collapse">
 			   <?php
@@ -230,7 +246,7 @@ header .navbar-inverse{
     
     <?php if( (is_front_page() && bi_get_data('enable_disable_slider') == '1') || (is_page() && $enable_disable_slider == 'on' && bi_get_data('enable_disable_slider') == '1') ) { $pixslider = bi_get_data('custom_slider'); ?>
     <!-- slider -->
-     <?php if($pixslider[1]['url']!=""){ ?>
+     <?php if($pixslider[1]['image']!=""){ ?>
     <section id="pixi-slider" class="carousel slide">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -247,7 +263,7 @@ header .navbar-inverse{
                     echo (
                         "<div class='item ". $addAct ."'>
                         	<a href=". $slide['link'] .">
-							<div class='fill' style='background-image:url(". $slide['url'] .");'></div>
+							<div class='fill' style='background-image:url(". $slide['image'] .");'></div>
 							</a>
                         	<div class='carousel-caption'>
 								<h3>".$slide['title']."</h3>
