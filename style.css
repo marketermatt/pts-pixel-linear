@@ -415,6 +415,7 @@ bt { font-size: 12px; }
 
 @media only screen and (max-width: 480px){
 	#pixi-slider{ height: 250px;} 
+	#top-search{display: none;}
 }
 @media only screen and (max-width: 340px){
 	#pixi-slider{ height: 170px;} 
