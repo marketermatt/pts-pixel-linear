@@ -23,9 +23,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 <title><?php wp_title('&#124;', true, 'right'); ?></title>
-<?php if( !empty(bi_get_data('custom_favicon')['url']) ) : ?>
-        <link rel="icon" type="image/png" href="<?php echo bi_get_data('custom_favicon')['url']; ?>" />
-    <?php endif; ?>
+
+<?php
+$favicon = bi_get_data('custom_favicon');
+?>
+<?php if( !empty($favicon['url']) ) : ?>
+        <link rel="icon" type="image/png" href="<?php echo $favicon['url']; ?>" />
+<?php endif; ?>
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -60,8 +64,10 @@ body{
 	<?php if( bi_get_data('custom_boxed_bg') != '' ) { ?>
 		background-color: <?php echo bi_get_data('custom_boxed_bg'); ?>;
 	<?php } ?>
-	<?php if( !empty(bi_get_data('custom_boxed_bgImg')['url']) ) { ?>
-		background-image: url('<?php echo bi_get_data('custom_boxed_bgImg')['url']; ?>');
+	<?php 
+        $custom_boxed_bgImg = bi_get_data('custom_boxed_bgImg');
+        if( !empty($custom_boxed_bgImg['url']) ) { ?>
+		background-image: url('<?php echo $custom_boxed_bgImg['url']; ?>');
 		background-position:center top;
 	<?php } ?>	
 }
@@ -160,9 +166,12 @@ header .navbar-inverse{
               <span class="icon-bar"></span>
             </button>
 
-            <?php if( !empty(bi_get_data('custom_logo')['url']) ) { ?>
+            <?php 
+
+            $custom_logo = bi_get_data('custom_logo');
+            if( !empty($custom_logo['url']) ) { ?>
             <div id="logo"><a href="<?php echo home_url(); ?>/" title="<?php bloginfo( 'name' ); ?>" rel="home">
-                <img src="<?php echo bi_get_data('custom_logo')['url']; ?>" alt="<?php bloginfo( 'name' ) ?>" />
+                <img src="<?php echo $custom_logo['url']; ?>" alt="<?php bloginfo( 'name' ) ?>" />
             </a></div>
             <?php } else { ?>
             <?php if (is_front_page()) { ?>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Index Template 2
+ * Index Template 
  *
  *
  * @file           index.php
