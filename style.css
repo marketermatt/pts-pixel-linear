@@ -12,6 +12,7 @@ License: GNU General Public License, version 3 (GPLv3)
 License URI: license.txt
 
 CSS Rules: Sorted alphabetically for better organization.
+Text Domain: azkaban
 
 */
 
@@ -412,15 +413,15 @@ bt { font-size: 12px; }
 .parallax{ background-color:rgba(0,0,0,0.5);}
 
 
+.mobile-show{display: block;}
+.mobile-hide{display: none;}
 
 @media only screen and (max-width: 480px){
 	#pixi-slider{ height: 250px;} 
 	#top-search{display: none;}
-	.navbar-left{display: none;}
 }
 @media only screen and (max-width: 340px){
 	#pixi-slider{ height: 170px;} 
-	.navbar-left{display: none;}
 }
 /*hover class*/
 .navbar-nav li:hover ul.dropdown-menu{

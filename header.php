@@ -23,13 +23,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 <title><?php wp_title('&#124;', true, 'right'); ?></title>
-
-<?php
-$favicon = bi_get_data('custom_favicon');
-?>
-<?php if( !empty($favicon['url']) ) : ?>
-        <link rel="icon" type="image/png" href="<?php echo $favicon['url']; ?>" />
-<?php endif; ?>
+<?php if( !empty(bi_get_data('custom_favicon')['url']) ) : ?>
+        <link rel="icon" type="image/png" href="<?php echo bi_get_data('custom_favicon')['url']; ?>" />
+    <?php endif; ?>
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -64,10 +60,8 @@ body{
 	<?php if( bi_get_data('custom_boxed_bg') != '' ) { ?>
 		background-color: <?php echo bi_get_data('custom_boxed_bg'); ?>;
 	<?php } ?>
-	<?php 
-        $custom_boxed_bgImg = bi_get_data('custom_boxed_bgImg');
-        if( !empty($custom_boxed_bgImg['url']) ) { ?>
-		background-image: url('<?php echo $custom_boxed_bgImg['url']; ?>');
+	<?php if( !empty(bi_get_data('custom_boxed_bgImg')['url']) ) { ?>
+		background-image: url('<?php echo bi_get_data('custom_boxed_bgImg')['url']; ?>');
 		background-position:center top;
 	<?php } ?>	
 }
@@ -166,12 +160,9 @@ header .navbar-inverse{
               <span class="icon-bar"></span>
             </button>
 
-            <?php 
-
-            $custom_logo = bi_get_data('custom_logo');
-            if( !empty($custom_logo['url']) ) { ?>
+            <?php if( !empty(bi_get_data('custom_logo')['url']) ) { ?>
             <div id="logo"><a href="<?php echo home_url(); ?>/" title="<?php bloginfo( 'name' ); ?>" rel="home">
-                <img src="<?php echo $custom_logo['url']; ?>" alt="<?php bloginfo( 'name' ) ?>" />
+                <img src="<?php echo bi_get_data('custom_logo')['url']; ?>" alt="<?php bloginfo( 'name' ) ?>" />
             </a></div>
             <?php } else { ?>
             <?php if (is_front_page()) { ?>
@@ -187,7 +178,7 @@ header .navbar-inverse{
 				<div id="logo_tagline"><?php echo bi_get_data('logo_tagline');?></div>
 			<?php } ?>
         </div>
-          <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <div class="navbar-collapse collapse navbar-responsive-collapse mobile-hide">
 			   <?php
 			   $top_nav = get_nav_menu_locations();
 	  		   if(!empty($top_nav['top-bar'])){
@@ -202,7 +193,35 @@ header .navbar-inverse{
 				  wp_nav_menu($args);
 				}
             ?>
-
+          </div>
+          <div class="navbar-collapse  navbar-responsive-collapse mobile-show" id="mobile-menu-container">
+               <?php
+               $top_nav = get_nav_menu_locations();
+               if(!empty($top_nav['mobile_menu']))
+               {
+                  $args = array(
+                      'theme_location' => 'mobile_menu',
+                      'depth'      => 3,
+                      'container'  => false,
+                      'menu_class'     => 'nav navbar-nav navbar-right',
+                      'walker'     => new Bootstrap_Walker_Nav_Menu()
+                  );
+  
+                  wp_nav_menu($args);
+                }
+                else
+                {
+                      $args = array(
+                          'theme_location' => 'secondary-nav-bar',
+                          'depth'      => 3,
+                          'container'  => false,
+                          'menu_class'     => 'nav navbar-nav navbar-right',
+                          'walker'     => new Bootstrap_Walker_Nav_Menu()
+                      );
+      
+                      wp_nav_menu($args);
+                }
+            ?>
           </div>
           </div>
           </div><!-- //row -->

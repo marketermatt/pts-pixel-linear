@@ -262,3 +262,13 @@ if (!function_exists("SMOF2ReduxConvertValue")) {
 		return $value;
 	}	
 }
+
+// Add Mobile Menu Locations
+function register_pts_mobile_menus() {
+  register_nav_menus(
+    array(  
+    	'mobile_menu' => __( 'Mobile Menu' )
+    )
+  );
+} 
+add_action( 'init', 'register_pts_mobile_menus' );

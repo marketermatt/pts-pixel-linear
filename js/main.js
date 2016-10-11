@@ -48,4 +48,25 @@ jQuery(function(){
 jQuery(document).ready(function(){
     // Activate carousel
     jQuery("#pixi-slider").carousel();
+
+    if(jQuery(window).width() <= 480)
+    {
+        jQuery('#mobile-menu-container').addClass('mobile-show');
+    }
+    else
+    {
+        jQuery('#mobile-menu-container').addClass('mobile-hide'); 
+    }
+
+    jQuery(window).resize(function() {
+        if(jQuery(window).width() <= 480)
+          {
+              jQuery('#mobile-menu-container').addClass('mobile-show');
+          }
+          else
+          {
+              jQuery('#mobile-menu-container').addClass('mobile-hide'); 
+          }
+    });
+
 })
