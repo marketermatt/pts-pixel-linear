@@ -180,7 +180,7 @@ function migrateSMOFDataToRedux($oldname, $oldtheme=false) {
 	}
 		
 }
-add_action("after_switch_theme", "updatedatabaseoptions", 10 ,  2);
+add_action("after_switch_theme", "migrateSMOFDataToRedux", 10 ,  2);
 
 if (!function_exists("SMOF2ReduxConvertValue")) {
 	function SMOF2ReduxConvertValue($value, $type) {
