@@ -2702,12 +2702,12 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
 
             // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
             $this->args['share_icons'][] = array(
-                'url'   => 'https://www.facebook.com/CraftyThemes',
+                'url'   => 'https://www.facebook.com/pixelthemestudio/?fref=ts',
                 'title' => 'Like us on Facebook',
                 'icon'  => 'el-icon-facebook'
             );
             $this->args['share_icons'][] = array(
-                'url'   => 'https://twitter.com/CraftyThemes',
+                'url'   => 'https://twitter.com/pthemestudio',
                 'title' => 'Follow us on Twitter',
                 'icon'  => 'el-icon-twitter'
             );
@@ -2717,11 +2717,11 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
                 'icon'  => 'el-icon-youtube'
                 //'img'   => '', // You can use icon OR img. IMG needs to be a full URL.
             ); */
-            $this->args['share_icons'][] = array(
+            /*$this->args['share_icons'][] = array(
                 'url'   => 'http://www.pinterest.com/berkansanches/pthemestudio/',
                 'title' => 'Find us on Pinterest',
                 'icon'  => 'el-icon-pinterest'
-            );
+            );*/
         }
     }
     
