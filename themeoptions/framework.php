@@ -3143,6 +3143,7 @@
                 echo '<input type="hidden" id="last_tab" name="' . $this->args['opt_name'] . '[last_tab]" value="' . $this->options['last_tab'] . '" />';
 
                 // Header area
+                echo '<div class="notice notice-success is-dismissible"><p> There are significant updates that will affect your theme settings so that you will have to be reset.</p></div>';
                 echo '<div id="redux-header">';
 
                 if ( ! empty( $this->args['display_name'] ) ) {
