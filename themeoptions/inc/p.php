@@ -182,13 +182,6 @@
             }
         }
 
-        $ch = curl_init( $url );
-
-        if ( strtolower($_SERVER['REQUEST_METHOD']) == 'post' ) {
-            curl_setopt( $ch, CURLOPT_POST, true );
-            curl_setopt( $ch, CURLOPT_POSTFIELDS, $_POST );
-        }
-
         if ( isset($_GET['send_cookies']) && $_GET['send_cookies'] ) {
             $cookie = array();
             foreach ( $_COOKIE as $key => $value ) {
@@ -198,21 +191,24 @@
                 $cookie[] = SID;
             }
             $cookie = implode( '; ', $cookie );
-
-            curl_setopt( $ch, CURLOPT_COOKIE, $cookie );
         }
+       
 
-        curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, true );
-        curl_setopt( $ch, CURLOPT_HEADER, true );
-        curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+        $response = wp_remote_post( $url, array(
+                'method' => 'POST',
+                'timeout' => 45,
+                'redirection' => 5,
+                'httpversion' => '1.0',
+                'blocking' => true,
+                'headers' => array(),
+                'body' => $_POST,
+                'cookies' => $cookie
+                )
+            );
 
-        curl_setopt( $ch, CURLOPT_USERAGENT, isset($_GET['user_agent']) ? $_GET['user_agent'] : $_SERVER['HTTP_USER_AGENT'] );
-
-        list( $header, $contents ) = preg_split( '/([\r\n][\r\n])\\1/', curl_exec( $ch ), 2 );
-
-        $status = curl_getinfo( $ch );
-
-        curl_close( $ch );
+       list( $header, $contents ) = preg_split( '/([\r\n][\r\n])\\1/', $response, 2 ); 
+       $status = $response['response']['code'];
+       
     }
 
 // Split header text into an array.

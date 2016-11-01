@@ -172,10 +172,10 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
 // Custom Pagination
 	function custom_link_pages($args = '') {
 		$defaults = array(
-			'before' => '<li>' . __('Pages:',''), 'after' => '</li>',
+			'before' => '<li>' . __('Pages:','pixel-linear'), 'after' => '</li>',
 			'link_before' => '', 'link_after' => '',
-			'next_or_number' => 'number', 'nextpagelink' => __('Next page',''),
-			'previouspagelink' => __('Previous page',''), 'pagelink' => '%',
+			'next_or_number' => 'number', 'nextpagelink' => __('Next page','pixel-linear'),
+			'previouspagelink' => __('Previous page','pixel-linear'), 'pagelink' => '%',
 			'echo' => 1
 			);
 

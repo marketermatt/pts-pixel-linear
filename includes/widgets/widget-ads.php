@@ -75,7 +75,7 @@ class ads125_widget extends WP_Widget {
 	}
 
 	function form( $instance ) {
-		$defaults = array( 'title' => __(' Advertisement', 'azkaban') );
+		$defaults = array( 'title' => __(' Advertisement', 'pixel-linear') );
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 
 		<p>

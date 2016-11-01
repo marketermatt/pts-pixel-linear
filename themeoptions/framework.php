@@ -168,15 +168,15 @@
                 }
 
                 if ( empty( $this->args['footer_credit'] ) ) {
-                    $this->args['footer_credit'] = '<span id="footer-thankyou">' . sprintf( __( 'Options panel created using %1$s', 'redux-framework' ), '<a href="' . esc_url( $this->framework_url ) . '" target="_blank">' . __( 'Redux Framework', 'redux-framework' ) . '</a> v' . self::$_version ) . '</span>';
+                    $this->args['footer_credit'] = '<span id="footer-thankyou">' . sprintf( __( 'Options panel created using %1$s', 'pixel-linear' ), '<a href="' . esc_url( $this->framework_url ) . '" target="_blank">' . __( 'Redux Framework', 'pixel-linear' ) . '</a> v' . self::$_version ) . '</span>';
                 }
 
                 if ( empty( $this->args['menu_title'] ) ) {
-                    $this->args['menu_title'] = __( 'Options', 'redux-framework' );
+                    $this->args['menu_title'] = __( 'Options', 'pixel-linear' );
                 }
 
                 if ( empty( $this->args['page_title'] ) ) {
-                    $this->args['page_title'] = __( 'Options', 'redux-framework' );
+                    $this->args['page_title'] = __( 'Options', 'pixel-linear' );
                 }
 
                 /**
@@ -485,7 +485,7 @@
             // Fix conflicts with Visual Composer.
             public function vc_fixes() {
                 wp_dequeue_script( 'wpb_ace' );
-                wp_deregister_script( 'wpb_ace' );                
+             
             }
             
             public function network_admin_bar( $wp_admin_bar ) {
@@ -552,16 +552,16 @@
                  * filter 'redux/textdomain/{opt_name}'
                  *
                  * @param string     The locale of the blog or from the 'locale' hook
-                 * @param string     'redux-framework'  text domain
+                 * @param string     'pixel-linear'  text domain
                  */
-                $locale = apply_filters( "redux/textdomain/{$this->args['opt_name']}", get_locale(), 'redux-framework' );
+                $locale = apply_filters( "redux/textdomain/{$this->args['opt_name']}", get_locale(), 'pixel-linear' );
 
                 if ( strpos( $locale, '_' ) === false ) {
                     if ( file_exists( self::$_dir . 'languages/' . strtolower( $locale ) . '_' . strtoupper( $locale ) . '.mo' ) ) {
                         $locale = strtolower( $locale ) . '_' . strtoupper( $locale );
                     }
                 }
-                load_textdomain( 'redux-framework', self::$_dir . 'languages/' . $locale . '.mo' );
+                load_textdomain( 'pixel-linear', self::$_dir . 'languages/' . $locale . '.mo' );
             } // _internationalization()
 
             /**
@@ -1206,8 +1206,8 @@
 
                         if ( true == $this->args['system_info'] ) {
                             add_theme_page(
-                                __( 'System Info', 'redux-framework' ),
-                                __( 'System Info', 'redux-framework' ),
+                                __( 'System Info', 'pixel-linear' ),
+                                __( 'System Info', 'pixel-linear' ),
                                 $this->args['page_permissions'],
                                 $this->args['page_slug'] . '&tab=system_info_default',
                                 '__return_null'
@@ -1268,7 +1268,7 @@
                     $nodeargs = array(
                         'id'    => $this->args["page_slug"],
                         'title' => "<span class='ab-icon dashicons-admin-generic'></span>" . $this->args['menu_title'],
-                        // $theme_data->get( 'Name' ) . " " . __( 'Options', 'redux-framework-demo' ),
+                        // $theme_data->get( 'Name' ) . " " . __( 'Options', 'pixel-linear' ),
                         'href'  => admin_url( 'admin.php?page=' . $this->args["page_slug"] ),
                         'meta'  => array()
                     );
@@ -1750,7 +1750,7 @@
                  *
                  * @param       string        save_pending string
                  */
-                $save_pending = apply_filters( "redux/{$this->args['opt_name']}/localize/save_pending", __( 'You have changes that are not saved. Would you like to save them now?', 'redux-framework' ) );
+                $save_pending = apply_filters( "redux/{$this->args['opt_name']}/localize/save_pending", __( 'You have changes that are not saved. Would you like to save them now?', 'pixel-linear' ) );
 
                 /**
                  * Reset all string
@@ -1758,7 +1758,7 @@
                  *
                  * @param       string        reset all string
                  */
-                $reset_all = apply_filters( "redux/{$this->args['opt_name']}/localize/reset", __( 'Are you sure? Resetting will lose all custom values.', 'redux-framework' ) );
+                $reset_all = apply_filters( "redux/{$this->args['opt_name']}/localize/reset", __( 'Are you sure? Resetting will lose all custom values.', 'pixel-linear' ) );
 
                 /**
                  * Reset section string
@@ -1766,7 +1766,7 @@
                  *
                  * @param       string        reset section string
                  */
-                $reset_section = apply_filters( "redux/{$this->args['opt_name']}/localize/reset_section", __( 'Are you sure? Resetting will lose all custom values in this section.', 'redux-framework' ) );
+                $reset_section = apply_filters( "redux/{$this->args['opt_name']}/localize/reset_section", __( 'Are you sure? Resetting will lose all custom values in this section.', 'pixel-linear' ) );
 
                 /**
                  * Preset confirm string
@@ -1774,14 +1774,14 @@
                  *
                  * @param       string        preset confirm string
                  */
-                $preset_confirm = apply_filters( "redux/{$this->args['opt_name']}/localize/preset", __( 'Your current options will be replaced with the values of this preset. Would you like to proceed?', 'redux-framework' ) );
+                $preset_confirm = apply_filters( "redux/{$this->args['opt_name']}/localize/preset", __( 'Your current options will be replaced with the values of this preset. Would you like to proceed?', 'pixel-linear' ) );
 
                 $this->localize_data['args'] = array(
                     'save_pending'          => $save_pending,
                     'reset_confirm'         => $reset_all,
                     'reset_section_confirm' => $reset_section,
                     'preset_confirm'        => $preset_confirm,
-                    'please_wait'           => __( 'Please Wait', 'redux-framework' ),
+                    'please_wait'           => __( 'Please Wait', 'pixel-linear' ),
                     'opt_name'              => $this->args['opt_name'],
                     'slug'                  => $this->args['page_slug'],
                     'hints'                 => $this->args['hints'],
@@ -1836,7 +1836,7 @@
                 // Values used by the javascript
                 wp_localize_script(
                     'redux-js',
-                    'redux',
+                    'pixel-linear',
                     $this->localize_data
                 );
 
@@ -1925,10 +1925,11 @@
                     $msg = 'Hints are tooltips that popup when ' . $event . ' the hint icon, offering addition information about the field in which they appear.  They can be ' . strtolower( $s ) . 'd by using the link below.<br/><br/>' . $url;
 
                     // Construct hint tab
+                    $msg = '<p>' . $msg . '</p>';
                     $tab = array(
                         'id'      => 'redux-hint-tab',
-                        'title'   => __( 'Hints', 'redux-framework-demo' ),
-                        'content' => __( '<p>' . $msg . '</p>', 'redux-framework-demo' )
+                        'title'   => __( 'Hints', 'pixel-linear' ),
+                        'content' => __( '%s', 'pixel-linear' ),$msg
                     );
 
                     $screen->add_help_tab( $tab );
@@ -2052,7 +2053,7 @@
                 }
 
                 if ( ! empty( $default_output ) ) {
-                    $default_output = __( 'Default', 'redux-framework' ) . ": " . substr( $default_output, 0, - 2 );
+                    $default_output = __( 'Default', 'pixel-linear' ) . ": " . substr( $default_output, 0, - 2 );
                 }
 
                 if ( ! empty( $default_output ) ) {
@@ -3102,7 +3103,7 @@
                 echo '<div class="wrap">';
 
                 // Do we support JS?
-                echo '<noscript><div class="no-js">' . __( 'Warning- This options panel will not work properly without javascript!', 'redux-framework' ) . '</div></noscript>';
+                echo '<noscript><div class="no-js">' . __( 'Warning- This options panel will not work properly without javascript!', 'pixel-linear' ) . '</div></noscript>';
 
                 // Security is vital!
                 echo '<input type="hidden" id="ajaxsecurity" name="security" value="' . wp_create_nonce( 'redux_ajax_nonce' ) . '" />';
@@ -3150,7 +3151,7 @@
                     echo '<div class="display_header">';
 
                     if ( isset( $this->args['dev_mode'] ) && $this->args['dev_mode'] ) {
-                        echo '<span class="redux-dev-mode-notice">' . __( 'Developer Mode Enabled', 'redux-framework' ) . '</span>';
+                        echo '<span class="redux-dev-mode-notice">' . __( 'Developer Mode Enabled', 'pixel-linear' ) . '</span>';
                     }
 
                     echo '<h2>' . $this->args['display_name'] . '</h2>';
@@ -3178,20 +3179,20 @@
 
                 $expanded = ( $this->args['open_expanded'] ) ? ' expanded' : '';
 
-                echo '<a href="javascript:void(0);" class="expand_options' . $expanded . '">' . __( 'Expand', 'redux-framework' ) . '</a>';
+                echo '<a href="javascript:void(0);" class="expand_options' . $expanded . '">' . __( 'Expand', 'pixel-linear' ) . '</a>';
                 echo '<div class="redux-action_bar">';
-                submit_button( __( 'Save Changes', 'redux-framework' ), 'primary', 'redux_save', false );
+                submit_button( __( 'Save Changes', 'pixel-linear' ), 'primary', 'redux_save', false );
 
                 if ( false === $this->args['hide_reset'] ) {
                     echo '&nbsp;';
-                    submit_button( __( 'Reset Section', 'redux-framework' ), 'secondary', $this->args['opt_name'] . '[defaults-section]', false );
+                    submit_button( __( 'Reset Section', 'pixel-linear' ), 'secondary', $this->args['opt_name'] . '[defaults-section]', false );
                     echo '&nbsp;';
-                    submit_button( __( 'Reset All', 'redux-framework' ), 'secondary', $this->args['opt_name'] . '[defaults]', false );
+                    submit_button( __( 'Reset All', 'pixel-linear' ), 'secondary', $this->args['opt_name'] . '[defaults]', false );
                 }
 
                 echo '</div>';
 
-                echo '<div class="redux-ajax-loading" alt="' . __( 'Working...', 'redux-framework' ) . '">&nbsp;</div>';
+                echo '<div class="redux-ajax-loading" alt="' . __( 'Working...', 'pixel-linear' ) . '">&nbsp;</div>';
                 echo '<div class="clear"></div>';
                 echo '</div>';
 
@@ -3211,7 +3212,7 @@
                          *
                          * @param string  translated "settings imported" text
                          */
-                        echo '<div class="admin-notice notice-blue saved_notice"><strong>' . apply_filters( "redux-imported-text-{$this->args['opt_name']}", __( 'Settings Imported!', 'redux-framework' ) ) . '</strong></div>';
+                        echo '<div class="admin-notice notice-blue saved_notice"><strong>' . apply_filters( "redux-imported-text-{$this->args['opt_name']}", __( 'Settings Imported!', 'pixel-linear' ) ) . '</strong></div>';
                         //exit();
                     } else if ( $this->transients['last_save_mode'] == "defaults" ) {
                         /**
@@ -3226,7 +3227,7 @@
                          *
                          * @param string  translated "settings imported" text
                          */
-                        echo '<div class="saved_notice admin-notice notice-yellow"><strong>' . apply_filters( "redux-defaults-text-{$this->args['opt_name']}", __( 'All Defaults Restored!', 'redux-framework' ) ) . '</strong></div>';
+                        echo '<div class="saved_notice admin-notice notice-yellow"><strong>' . apply_filters( "redux-defaults-text-{$this->args['opt_name']}", __( 'All Defaults Restored!', 'pixel-linear' ) ) . '</strong></div>';
                     } else if ( $this->transients['last_save_mode'] == "defaults_section" ) {
                         /**
                          * action 'redux/options/{opt_name}/section/reset'
@@ -3240,7 +3241,7 @@
                          *
                          * @param string  translated "settings imported" text
                          */
-                        echo '<div class="saved_notice admin-notice notice-yellow"><strong>' . apply_filters( "redux-defaults-section-text-{$this->args['opt_name']}", __( 'Section Defaults Restored!', 'redux-framework' ) ) . '</strong></div>';
+                        echo '<div class="saved_notice admin-notice notice-yellow"><strong>' . apply_filters( "redux-defaults-section-text-{$this->args['opt_name']}", __( 'Section Defaults Restored!', 'pixel-linear' ) ) . '</strong></div>';
                     } else {
                         /**
                          * action 'redux/options/{opt_name}/saved'
@@ -3254,7 +3255,7 @@
                          *
                          * @param string translated "settings saved" text
                          */
-                        echo '<div class="saved_notice admin-notice notice-green"><strong>' . apply_filters( "redux-saved-text-{$this->args['opt_name']}", __( 'Settings Saved!', 'redux-framework' ) ) . '</strong></div>';
+                        echo '<div class="saved_notice admin-notice notice-green"><strong>' . apply_filters( "redux-saved-text-{$this->args['opt_name']}", __( 'Settings Saved!', 'pixel-linear' ) ) . '</strong></div>';
                     }
                     unset( $this->transients['last_save_mode'] );
 
@@ -3272,7 +3273,7 @@
                  *
                  * @param string translated "settings have changed" text
                  */
-                echo '<div class="redux-save-warn notice-yellow"><strong>' . apply_filters( "redux-changed-text-{$this->args['opt_name']}", __( 'Settings have changed, you should save them!', 'redux-framework' ) ) . '</strong></div>';
+                echo '<div class="redux-save-warn notice-yellow"><strong>' . apply_filters( "redux-changed-text-{$this->args['opt_name']}", __( 'Settings have changed, you should save them!', 'pixel-linear' ) ) . '</strong></div>';
 
                 /**
                  * action 'redux/options/{opt_name}/errors'
@@ -3280,7 +3281,7 @@
                  * @param array $this ->errors error information
                  */
                 do_action( "redux/options/{$this->args['opt_name']}/errors", $this->errors );
-                echo '<div class="redux-field-errors notice-red"><strong><span></span> ' . __( 'error(s) were found!', 'redux-framework' ) . '</strong></div>';
+                echo '<div class="redux-field-errors notice-red"><strong><span></span> ' . __( 'error(s) were found!', 'pixel-linear' ) . '</strong></div>';
 
                 /**
                  * action 'redux/options/{opt_name}/warnings'
@@ -3288,7 +3289,7 @@
                  * @param array $this ->warnings warning information
                  */
                 do_action( "redux/options/{$this->args['opt_name']}/warnings", $this->warnings );
-                echo '<div class="redux-field-warnings notice-yellow"><strong><span></span> ' . __( 'warning(s) were found!', 'redux-framework' ) . '</strong></div>';
+                echo '<div class="redux-field-warnings notice-yellow"><strong><span></span> ' . __( 'warning(s) were found!', 'pixel-linear' ) . '</strong></div>';
 
                 echo '</div>';
 
@@ -3352,7 +3353,7 @@
                         $icon       = ( ! isset( $this->args['system_info_icon'] ) ) ? '<i class="el-icon-info-sign' . $icon_class . '"></i>' : '<i class="icon-' . $this->args['system_info_icon'] . $icon_class . '"></i> ';
                     }
 
-                    echo '<a href="javascript:void(0);" id="system_info_default_section_group_li_a" class="redux-group-tab-link-a custom-tab" data-rel="system_info_default">' . $icon . ' <span class="group_title">' . __( 'System Info', 'redux-framework' ) . '</span></a>';
+                    echo '<a href="javascript:void(0);" id="system_info_default_section_group_li_a" class="redux-group-tab-link-a custom-tab" data-rel="system_info_default">' . $icon . ' <span class="group_title">' . __( 'System Info', 'pixel-linear' ) . '</span></a>';
                     echo '</li>';
                 }
 
@@ -3431,7 +3432,7 @@
                     $system_info = new Simple_System_Info();
 
                     echo '<div id="system_info_default_section_group' . '" class="redux-group-tab">';
-                    echo '<h3>' . __( 'System Info', 'redux-framework' ) . '</h3>';
+                    echo '<h3>' . __( 'System Info', 'pixel-linear' ) . '</h3>';
 
                     echo '<div id="redux-system-info">';
                     echo $system_info->get( true );
@@ -3488,18 +3489,18 @@
                 }
 
                 echo '<div class="redux-action_bar">';
-                submit_button( __( 'Save Changes', 'redux-framework' ), 'primary', 'redux_save', false );
+                submit_button( __( 'Save Changes', 'pixel-linear' ), 'primary', 'redux_save', false );
 
                 if ( false === $this->args['hide_reset'] ) {
                     echo '&nbsp;';
-                    submit_button( __( 'Reset Section', 'redux-framework' ), 'secondary', $this->args['opt_name'] . '[defaults-section]', false );
+                    submit_button( __( 'Reset Section', 'pixel-linear' ), 'secondary', $this->args['opt_name'] . '[defaults-section]', false );
                     echo '&nbsp;';
-                    submit_button( __( 'Reset All', 'redux-framework' ), 'secondary', $this->args['opt_name'] . '[defaults]', false );
+                    submit_button( __( 'Reset All', 'pixel-linear' ), 'secondary', $this->args['opt_name'] . '[defaults]', false );
                 }
 
                 echo '</div>';
 
-                echo '<div class="redux-ajax-loading" alt="' . __( 'Working...', 'redux-framework' ) . '">&nbsp;</div>';
+                echo '<div class="redux-ajax-loading" alt="' . __( 'Working...', 'pixel-linear' ) . '">&nbsp;</div>';
                 echo '<div class="clear"></div>';
 
                 echo '</div>';

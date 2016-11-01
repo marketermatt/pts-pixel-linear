@@ -250,7 +250,7 @@ if ( ! class_exists( 'Redux_Functions' ) ) {
                             }
 
                             // Print the notice with the dismiss link
-                            echo '<div class="' . $notice['type'] . '"><p>' . $notice['msg'] . '&nbsp;&nbsp;<a href="?dismiss=true&amp;id=' . $notice['id'] . $pageName . $curTab . '">' . __( 'Dismiss', 'redux-framework' ) . '</a>.</p></div>';
+                            echo '<div class="' . $notice['type'] . '"><p>' . $notice['msg'] . '&nbsp;&nbsp;<a href="?dismiss=true&amp;id=' . $notice['id'] . $pageName . $curTab . '">' . __( 'Dismiss', 'pixel-linear' ) . '</a>.</p></div>';
                         }
                     } else {
 

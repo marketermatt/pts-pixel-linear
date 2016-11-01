@@ -111,8 +111,8 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
         function dynamic_section($sections) {
             //$sections = array();
             $sections[] = array(
-                'title' => __('Section via hook', 'azkaban_options'),
-                'desc' => __('<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'azkaban_options'),
+                'title' => __('Section via hook', 'pixel-linear'),
+                'desc' => __('<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'pixel-linear'),
                 'icon' => 'el-icon-paper-clip',
                 // Leave this as a blank section, no options just some intro text set above.
                 'fields' => array()
@@ -190,31 +190,31 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
             $screenshot     = $this->theme->get_screenshot();
             $class          = $screenshot ? 'has-screenshot' : '';
 
-            $customize_title = sprintf(__('Customize &#8220;%s&#8221;', 'azkaban_options'), $this->theme->display('Name'));
+            $customize_title = sprintf(__('Customize &#8220;%s&#8221;', 'pixel-linear'), $this->theme->display('Name'));
             
             ?>
             <div id="current-theme" class="<?php echo esc_attr($class); ?>">
             <?php if ($screenshot) : ?>
                 <?php if (current_user_can('edit_theme_options')) : ?>
                         <a href="<?php echo wp_customize_url(); ?>" class="load-customize hide-if-no-customize" title="<?php echo esc_attr($customize_title); ?>">
-                            <img src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview','azkaban'); ?>" />
+                            <img src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview','pixel-linear'); ?>" />
                         </a>
                 <?php endif; ?>
-                    <img class="hide-if-customize" src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview','azkaban'); ?>" />
+                    <img class="hide-if-customize" src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview','pixel-linear'); ?>" />
                 <?php endif; ?>
 
                 <h4><?php echo $this->theme->display('Name'); ?></h4>
 
                 <div>
                     <ul class="theme-info">
-                        <li><?php printf(__('By %s', 'azkaban_options'), $this->theme->display('Author')); ?></li>
-                        <li><?php printf(__('Version %s', 'azkaban_options'), $this->theme->display('Version')); ?></li>
-                        <li><?php echo '<strong>' . __('Tags', 'azkaban_options') . ':</strong> '; ?><?php printf($this->theme->display('Tags')); ?></li>
+                        <li><?php printf(__('By %s', 'pixel-linear'), $this->theme->display('Author')); ?></li>
+                        <li><?php printf(__('Version %s', 'pixel-linear'), $this->theme->display('Version')); ?></li>
+                        <li><?php echo '<strong>' . __('Tags', 'pixel-linear') . ':</strong> '; ?><?php printf($this->theme->display('Tags')); ?></li>
                     </ul>
                     <p class="theme-description"><?php echo $this->theme->display('Description'); ?></p>
             <?php
             if ($this->theme->parent()) {
-                printf(' <p class="howto">' . __('This <a href="%1$s">child theme</a> requires its parent theme, %2$s.','azkaban') . '</p>', __('http://codex.wordpress.org/Child_Themes', 'azkaban_options'), $this->theme->parent()->display('Name'));
+                printf(' <p class="howto">' . __('This <a href="%1$s">child theme</a> requires its parent theme, %2$s.','pixel-linear') . '</p>', __('http://codex.wordpress.org/Child_Themes', 'pixel-linear'), $this->theme->parent()->display('Name'));
             }
             ?>
 
@@ -240,7 +240,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
             // ACTUAL DECLARATION OF SECTIONS
 			$this->sections[] = array(
                 'icon'      => 'el-icon-credit-card',
-                'title'     => __('General', 'azkaban_options'),
+                'title'     => __('General', 'pixel-linear'),
                 'fields'    => array(
                     array (
 					'id' => 'custom_ads',
@@ -311,8 +311,8 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
                     array(
                         'id'        => 'blog-layout',
                         'type'      => 'select',
-                        'title'     => __('Select Blog Layout', 'azkaban_options'),
-                        'desc'      => __('Select site wide blog layout.', 'azkaban_options'),
+                        'title'     => __('Select Blog Layout', 'pixel-linear'),
+                        'desc'      => __('Select site wide blog layout.', 'pixel-linear'),
                         'options'   => array(
                             '1' => 'Large Featured',
                             '2' => 'Medium Featured',
@@ -326,7 +326,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
 			
             $this->sections[] = array(
                 'icon'      => 'el-icon-credit-card',
-                'title'     => __('Home Settings', 'azkaban_options'),
+                'title'     => __('Home Settings', 'pixel-linear'),
                 'fields'    => array(
 					array (
 					'desc' => 'Click on button to enable slider on homepage',
@@ -354,8 +354,8 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
                     array(
                         'id'        => 'blog-layout',
                         'type'      => 'select',
-                        'title'     => __('Select Blog Layout', 'azkaban_options'),
-                        'desc'      => __('Select site wide blog layout.', 'azkaban_options'),
+                        'title'     => __('Select Blog Layout', 'pixel-linear'),
+                        'desc'      => __('Select site wide blog layout.', 'pixel-linear'),
                         'options'   => array(
                             '1' => 'Large Featured',
                             '2' => 'Medium Featured',
@@ -369,7 +369,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
 
             $this->sections[] = array(
                 'icon'      => 'el-icon-css',
-                'title'     => __('Styling Options', 'azkaban_options'),
+                'title'     => __('Styling Options', 'pixel-linear'),
                 'fields'    => array(
                     array (
 					'desc' => 'Pick a background color for body<br>(default: #fff).',
@@ -425,7 +425,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
 
             $this->sections[] = array(
                 'icon'      => 'el-icon-cogs',
-                'title'     => __('Typography', 'azkaban_options'),
+                'title'     => __('Typography', 'pixel-linear'),
                 'fields'    => array(
                     array (
 					'desc' => 'Specify the body font properties.',
@@ -2452,7 +2452,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
             
             $this->sections[] = array(
                 'icon'      => 'el-icon-hand-down',
-                'title'     => __('Social Settings', 'azkaban_options'),
+                'title'     => __('Social Settings', 'pixel-linear'),
                 'fields'    => array(
                     array (
 					'desc' => 'Click on button to enable Social Icons at bottom',
@@ -2537,7 +2537,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
             
             $this->sections[] = array(
                 'icon'      => 'el-icon-list-alt',
-                'title'     => __('Footer Settings', 'azkaban_options'),
+                'title'     => __('Footer Settings', 'pixel-linear'),
                 'fields'    => array(
                     array (
 					'desc' => 'Upload your footer logo here.',
@@ -2558,7 +2558,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
 
             $this->sections[] = array(
                 'icon'      => 'el-icon-list-alt',
-                'title'     => __('Tracking Code', 'azkaban_options'),
+                'title'     => __('Tracking Code', 'pixel-linear'),
                 'fields'    => array(
                     array (
 					'desc' => 'Paste your Google Analytics (or other) tracking code here. This will be added into the header template of your theme.',
@@ -2577,20 +2577,20 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
 
             
             $theme_info  = '<div class="redux-framework-section-desc">';
-            $theme_info .= '<p class="redux-framework-theme-data description theme-uri">' . __('<strong>Theme URL:</strong> ', 'azkaban_options') . '<a href="' . $this->theme->get('ThemeURI') . '" target="_blank">' . $this->theme->get('ThemeURI') . '</a></p>';
-            $theme_info .= '<p class="redux-framework-theme-data description theme-author">' . __('<strong>Author:</strong> ', 'azkaban_options') . $this->theme->get('Author') . '</p>';
-            $theme_info .= '<p class="redux-framework-theme-data description theme-version">' . __('<strong>Version:</strong> ', 'azkaban_options') . $this->theme->get('Version') . '</p>';
+            $theme_info .= '<p class="redux-framework-theme-data description theme-uri">' . __('<strong>Theme URL:</strong> ', 'pixel-linear') . '<a href="' . $this->theme->get('ThemeURI') . '" target="_blank">' . $this->theme->get('ThemeURI') . '</a></p>';
+            $theme_info .= '<p class="redux-framework-theme-data description theme-author">' . __('<strong>Author:</strong> ', 'pixel-linear') . $this->theme->get('Author') . '</p>';
+            $theme_info .= '<p class="redux-framework-theme-data description theme-version">' . __('<strong>Version:</strong> ', 'pixel-linear') . $this->theme->get('Version') . '</p>';
             $theme_info .= '<p class="redux-framework-theme-data description theme-description">' . $this->theme->get('Description') . '</p>';
             $tabs = $this->theme->get('Tags');
             if (!empty($tabs)) {
-                $theme_info .= '<p class="redux-framework-theme-data description theme-tags">' . __('<strong>Tags:</strong> ', 'azkaban_options') . implode(', ', $tabs) . '</p>';
+                $theme_info .= '<p class="redux-framework-theme-data description theme-tags">' . __('<strong>Tags:</strong> ', 'pixel-linear') . implode(', ', $tabs) . '</p>';
             }
             $theme_info .= '</div>';
 
             // You can append a new section at any time.
             $this->sections[] = array(
-                'title'     => __('Backup', 'azkaban_options'),
-                'desc'      => __('Import and Export your theme settings from file, text or URL.', 'azkaban_options'),
+                'title'     => __('Backup', 'pixel-linear'),
+                'desc'      => __('Import and Export your theme settings from file, text or URL.', 'pixel-linear'),
                 'icon'      => 'el-icon-refresh',
                 'fields'    => array(
                     array(
@@ -2609,8 +2609,8 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
 
             $this->sections[] = array(
                 'icon'      => 'el-icon-info-sign',
-                'title'     => __('Theme Information', 'azkaban_options'),
-                'desc'      => __('<p class="description">Visit us at <a href="http://PixelThemeStudio.ca/">PixelThemeStudio.ca</a></p>', 'azkaban_options'),
+                'title'     => __('Theme Information', 'pixel-linear'),
+                'desc'      => __('<p class="description">Visit us at <a href="http://PixelThemeStudio.ca/">PixelThemeStudio.ca</a></p>', 'pixel-linear'),
                 'fields'    => array(
                     array(
                         'id'        => 'opt-raw-info',
@@ -2623,22 +2623,22 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
         }
 
         public function setHelpTabs() {
-
+            define(get_template_directory_uri, get_template_directory_uri());
             // Custom page help tabs, displayed using the help API. Tabs are shown in order of definition.
             $this->args['help_tabs'][] = array(
                 'id'        => 'azkaban-help-tab-1',
-                'title'     => __('More Information', 'azkaban_options'),
-                'content'   => __('<p>Feel free to <a href="http://PixelThemeStudio.ca/contact/">contact us</a> for any help you need.</p>', 'azkaban_options')
+                'title'     => __('More Information', 'pixel-linear'),
+                'content'   => __('<p>Feel free to <a href="http://PixelThemeStudio.ca/contact/">contact us</a> for any help you need.</p>', 'pixel-linear')
             );
 
             $this->args['help_tabs'][] = array(
                 'id'        => 'azkaban-help-tab-2',
-                'title'     => __('Submit Review', 'azkaban_options'),
-                'content'   => __('<p>Submit your review at <a href="http://PixelThemeStudio.ca/">PixelThemeStudio.ca</a>.</p>', 'azkaban_options')
+                'title'     => __('Submit Review', 'pixel-linear'),
+                'content'   => __('<p>Submit your review at <a href="http://PixelThemeStudio.ca/">PixelThemeStudio.ca</a>.</p>', 'pixel-linear')
             );
 
             // Set the help sidebar
-            $this->args['help_sidebar'] = __('<p><a href="https://www.facebook.com/pthemestudio" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/fb.png" title="Find Us On Facebook" /></a> <a href="https://twitter.com/pthemestudio" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/twitter.png" title="Follow Us On Twitter" /></a> <a href="https://www.youtube.com/channel/UCHBQpt1gn7woiKQkgVDAObw" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/youtube.png" title="Check Us On YouTube" /></a> <a href="http://www.pinterest.com/berkansanches/pthemestudio/" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/pinterest.png" title="Check Us On Pinterest" /></a></p>', 'azkaban_options');
+            $this->args['help_sidebar'] = __('<p><a href="https://www.facebook.com/pthemestudio" target="_blank"><img src="get_template_directory_uri/images/socialicons/fb.png" title="Find Us On Facebook" /></a> <a href="https://twitter.com/pthemestudio" target="_blank"><img src="get_template_directory_uri/images/socialicons/twitter.png" title="Follow Us On Twitter" /></a> <a href="https://www.youtube.com/channel/UCHBQpt1gn7woiKQkgVDAObw" target="_blank"><img src="get_template_directory_uri/images/socialicons/youtube.png" title="Check Us On YouTube" /></a> <a href="http://www.pinterest.com/berkansanches/pthemestudio/" target="_blank"><img src="get_template_directory_uri/images/socialicons/pinterest.png" title="Check Us On Pinterest" /></a></p>', 'pixel-linear');
         }
 
         /**

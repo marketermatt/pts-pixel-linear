@@ -19,9 +19,9 @@
             public function ftp_form() {
                 if ( isset( $this->ftp_form ) && ! empty( $this->ftp_form ) ) {
                     echo '<div class="wrap"><div class="error"><p>';
-                    echo __( 'Unable to create a required directory. Please ensure that', 'redux-framework' );
+                    echo __( 'Unable to create a required directory. Please ensure that', 'pixel-linear' );
                     echo ' <code>' . Redux_Helpers::cleanFilePath( trailingslashit( WP_CONTENT_DIR ) ) . '/uploads/</code> ';
-                    echo __( 'has the proper read/write permissions or enter your FTP information below.', 'redux-framework' );
+                    echo __( 'has the proper read/write permissions or enter your FTP information below.', 'pixel-linear' );
                     echo '</p></div><h2></h2>' . $this->ftp_form . '</div>';
                 }
             }
@@ -115,7 +115,7 @@
                 } elseif ( $action == 'put_contents' && ! isset( $this->filesystem->killswitch ) ) {
                     $res = $wp_filesystem->put_contents( $file, $content, $chmod );
                     if ( ! $res ) {
-                        $res = file_put_contents( $file, $content );
+                        $res = $wp_filesystem->put_contents( $file, $content, $chmod );
                         if ( $res ) {
                             chmod( $file, $chmod );
                         }
@@ -123,7 +123,7 @@
                 } elseif ( $action == 'get_contents' ) {
                     $res = $wp_filesystem->get_contents( $file );
                     if ( ! $res ) {
-                        $res = file_get_contents( $file );
+                        $res = $wp_filesystem->get_contents( $file );
                     }
                 } elseif ( $action == 'object' ) {
                     $res = $wp_filesystem;

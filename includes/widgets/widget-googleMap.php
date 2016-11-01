@@ -38,13 +38,13 @@ class Google_Map_Widget extends WP_Widget {
 	 */
 	function Google_Map_Widget() {
 		/* Widget settings. */
-		$widget_ops = array( 'classname' => 'widget_googlemap', 'description' => esc_html__('Google Map widget.', 'azkaban') );
+		$widget_ops = array( 'classname' => 'widget_googlemap', 'description' => esc_html__('Google Map widget.', 'pixel-linear') );
 
 		/* Widget control settings. */
 		$control_ops = array( 'width' => 350, 'height' => 350, 'id_base' => 'googlemap-widget' );
 
 		/* Create the widget. */
-		$this->WP_Widget( 'googlemap-widget', esc_html__('Azkaban: Google Map', 'azkaban'), $widget_ops, $control_ops );
+		$this->WP_Widget( 'googlemap-widget', esc_html__('Azkaban: Google Map', 'pixel-linear'), $widget_ops, $control_ops );
 	}
 
 	/**
@@ -104,32 +104,32 @@ class Google_Map_Widget extends WP_Widget {
 	function form( $instance ) {
 
 		/* Set up some default widget settings. */
-		$defaults = array( 'title' => esc_html__('Google Map', 'azkaban'), 'googlemap_code' => '' );
+		$defaults = array( 'title' => esc_html__('Google Map', 'pixel-linear'), 'googlemap_code' => '' );
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 
 		<!-- Widget Title: Text Input -->
 		<p>
-		    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e('Title:', 'azkaban'); ?></label>
+		    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e('Title:', 'pixel-linear'); ?></label>
 		    <input id="<?php echo $this->get_field_id( 'title' ); ?>" type="text" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" style="width:100%;" />
 		</p>
 		<!-- Widget Title: Text Area Input -->
 		<p>
-		    <label for="<?php echo $this->get_field_id( 'googlemap_api' ); ?>"><?php esc_html_e('Google Map API:', 'azkaban'); ?></label>
+		    <label for="<?php echo $this->get_field_id( 'googlemap_api' ); ?>"><?php esc_html_e('Google Map API:', 'pixel-linear'); ?></label>
 		    <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'googlemap_api' ); ?>" name="<?php echo $this->get_field_name( 'googlemap_api' ); ?>" value="<?php if( $instance['googlemap_api'] ){ echo esc_attr($instance['googlemap_api']); } ?>" />
 		</p>
 
 		<p>
-		    <label for="<?php echo $this->get_field_id( 'googlemap_code' ); ?>"><?php esc_html_e('Google Map Code:', 'azkaban'); ?></label>
+		    <label for="<?php echo $this->get_field_id( 'googlemap_code' ); ?>"><?php esc_html_e('Google Map Code:', 'pixel-linear'); ?></label>
 		    <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'googlemap_code' ); ?>" name="<?php echo $this->get_field_name( 'googlemap_code' ); ?>" value="<?php if( $instance['googlemap_code'] ){ echo esc_attr($instance['googlemap_code']); } ?>" />
 		</p>
 
 		<p>
-		    <label for="<?php echo $this->get_field_id( 'googlemap_width' ); ?>"><?php esc_html_e('Google Map Width:', 'azkaban'); ?></label>
+		    <label for="<?php echo $this->get_field_id( 'googlemap_width' ); ?>"><?php esc_html_e('Google Map Width:', 'pixel-linear'); ?></label>
 		    <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'googlemap_width' ); ?>" name="<?php echo $this->get_field_name( 'googlemap_width' ); ?>" value="<?php if( $instance['googlemap_width'] ){ echo esc_attr($instance['googlemap_width']); } ?>" />
 		</p>
 
 		<p>
-		    <label for="<?php echo $this->get_field_id( 'googlemap_height' ); ?>"><?php esc_html_e('Google Map Height:', 'azkaban'); ?></label>
+		    <label for="<?php echo $this->get_field_id( 'googlemap_height' ); ?>"><?php esc_html_e('Google Map Height:', 'pixel-linear'); ?></label>
 		    <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'googlemap_height' ); ?>" name="<?php echo $this->get_field_name( 'googlemap_height' ); ?>" value="<?php if( $instance['googlemap_height'] ){ echo esc_attr($instance['googlemap_height']); } ?>" />
 		</p>
 

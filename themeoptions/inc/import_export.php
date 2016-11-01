@@ -75,33 +75,33 @@
                 echo '<div id="import_export_default_section_group' . '" class="' . $c . '">';
 
                 if ( false == $this->is_field ) {
-                    echo '<h3>' . __( 'Import / Export Options', 'redux-framework' ) . '</h3>';
+                    echo '<h3>' . __( 'Import / Export Options', 'pixel-linear' ) . '</h3>';
                 }
 
-                echo '<h4>' . __( 'Import Options', 'redux-framework' ) . '</h4>';
-                echo '<p><a href="javascript:void(0);" id="redux-import-code-button" class="button-secondary">' . __( 'Import from file', 'redux-framework' ) . '</a> <a href="javascript:void(0);" id="redux-import-link-button" class="button-secondary">' . __( 'Import from URL', 'redux-framework' ) . '</a></p>';
+                echo '<h4>' . __( 'Import Options', 'pixel-linear' ) . '</h4>';
+                echo '<p><a href="javascript:void(0);" id="redux-import-code-button" class="button-secondary">' . __( 'Import from file', 'pixel-linear' ) . '</a> <a href="javascript:void(0);" id="redux-import-link-button" class="button-secondary">' . __( 'Import from URL', 'pixel-linear' ) . '</a></p>';
 
                 echo '<div id="redux-import-code-wrapper">';
-                echo '<p class="description" id="import-code-description">' . apply_filters( 'redux-import-file-description', __( 'Input your backup file below and hit Import to restore your sites options from a backup.', 'redux-framework' ) ) . '</p>';
+                echo '<p class="description" id="import-code-description">' . apply_filters( 'redux-import-file-description', __( 'Input your backup file below and hit Import to restore your sites options from a backup.', 'pixel-linear' ) ) . '</p>';
                 echo '<textarea id="import-code-value" name="' . $this->parent->args['opt_name'] . '[import_code]" class="large-text noUpdate" rows="8"></textarea>';
                 echo '</div>';
 
                 echo '<div id="redux-import-link-wrapper">';
-                echo '<p class="description" id="import-link-description">' . apply_filters( 'redux-import-link-description', __( 'Input the URL to another sites options set and hit Import to load the options from that site.', 'redux-framework' ) ) . '</p>';
+                echo '<p class="description" id="import-link-description">' . apply_filters( 'redux-import-link-description', __( 'Input the URL to another sites options set and hit Import to load the options from that site.', 'pixel-linear' ) ) . '</p>';
                 echo '<input type="text" id="import-link-value" name="' . $this->parent->args['opt_name'] . '[import_link]" class="large-text noUpdate" value="" />';
                 echo '</div>';
 
-                echo '<p id="redux-import-action"><input type="submit" id="redux-import" name="' . $this->parent->args['opt_name'] . '[import]" class="button-primary" value="' . __( 'Import', 'redux-framework' ) . '">&nbsp;&nbsp;<span>' . apply_filters( 'redux-import-warning', __( 'WARNING! This will overwrite all existing option values, please proceed with caution!', 'redux-framework' ) ) . '</span></p>';
+                echo '<p id="redux-import-action"><input type="submit" id="redux-import" name="' . $this->parent->args['opt_name'] . '[import]" class="button-primary" value="' . __( 'Import', 'pixel-linear' ) . '">&nbsp;&nbsp;<span>' . apply_filters( 'redux-import-warning', __( 'WARNING! This will overwrite all existing option values, please proceed with caution!', 'pixel-linear' ) ) . '</span></p>';
 
                 echo '<div class="hr"/><div class="inner"><span>&nbsp;</span></div></div>';
-                echo '<h4>' . __( 'Export Options', 'redux-framework' ) . '</h4>';
+                echo '<h4>' . __( 'Export Options', 'pixel-linear' ) . '</h4>';
                 echo '<div class="redux-section-desc">';
 
-                echo '<p class="description">' . apply_filters( 'redux-backup-description', __( 'Here you can copy/download your current option settings. Keep this safe as you can use it as a backup should anything go wrong, or you can use it to restore your settings on this site (or any other site).', 'redux-framework' ) ) . '</p>';
+                echo '<p class="description">' . apply_filters( 'redux-backup-description', __( 'Here you can copy/download your current option settings. Keep this safe as you can use it as a backup should anything go wrong, or you can use it to restore your settings on this site (or any other site).', 'pixel-linear' ) ) . '</p>';
                 echo '</div>';
 
                 $link = admin_url( 'admin-ajax.php?action=redux_download_options&secret=' . $secret );
-                echo '<p><a href="javascript:void(0);" id="redux-export-code-copy" class="button-secondary">' . __( 'Copy', 'redux-framework' ) . '</a> <a href="' . $link . '" id="redux-export-code-dl" class="button-primary">' . __( 'Download', 'redux-framework' ) . '</a> <a href="javascript:void(0);" id="redux-export-link" class="button-secondary">' . __( 'Copy Link', 'redux-framework' ) . '</a></p>';
+                echo '<p><a href="javascript:void(0);" id="redux-export-code-copy" class="button-secondary">' . __( 'Copy', 'pixel-linear' ) . '</a> <a href="' . $link . '" id="redux-export-code-dl" class="button-primary">' . __( 'Download', 'pixel-linear' ) . '</a> <a href="javascript:void(0);" id="redux-export-link" class="button-secondary">' . __( 'Copy Link', 'pixel-linear' ) . '</a></p>';
 
                 $backup_options                 = $this->parent->options;
                 $backup_options['redux-backup'] = '1';
@@ -137,7 +137,7 @@
                     $icon       = ( ! isset( $this->parent->args['import_icon'] ) ) ? '<i class="el-icon-refresh' . $icon_class . '"></i>' : '<i class="icon-' . $this->parent->args['import_icon'] . $icon_class . '"></i> ';
                 }
 
-                echo '<a href="javascript:void(0);" id="import_export_default_section_group_li_a" class="redux-group-tab-link-a" data-rel="import_export_default">' . $icon . ' <span class="group_title">' . __( 'Import / Export', 'redux-framework' ) . '</span></a>';
+                echo '<a href="javascript:void(0);" id="import_export_default_section_group_li_a" class="redux-group-tab-link-a" data-rel="import_export_default">' . $icon . ' <span class="group_title">' . __( 'Import / Export', 'pixel-linear' ) . '</span></a>';
                 echo '</li>';
 
                 echo '<li class="divide">&nbsp;</li>';
@@ -145,8 +145,8 @@
 
             public function add_submenu() {
                 add_theme_page(
-                    __( 'Import / Export', 'redux-framework' ),
-                    __( 'Import / Export', 'redux-framework' ),
+                    __( 'Import / Export', 'pixel-linear' ),
+                    __( 'Import / Export', 'pixel-linear' ),
                     $this->parent->args['page_permissions'],
                     $this->parent->args['page_slug'] . '&tab=import_export_default',
                     '__return_null'

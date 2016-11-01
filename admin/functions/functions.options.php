@@ -84,7 +84,7 @@ if (!function_exists('of_options'))
 
 		$menu_color = array( 'Default', 'Inverse' );
 		// Homepage Latest Blog or Featured Image
-		$hp_array = array('featured' => __('Featured Hero Unit', 'gents'),'latest' => __('Latest Blog Post', 'gents'));
+		$hp_array = array('featured' => __('Featured Hero Unit', 'pixel-linear'),'latest' => __('Latest Blog Post', 'pixel-linear'));
 		// Buttons
 		$btn_color = array("default" => "Default Gray","primary" => "Primary","info" => "Info","success" => "Success","warning" => "Warning","danger" => "Danger","inverse" => "Inverse");
 		$btn_size = array("xs" => "Extra Small","sm" => "Small","default" => "Medium","lg" => "Large");
@@ -1437,50 +1437,50 @@ if (!function_exists('of_options'))
 		$of_options = array();
 
         //General Settings
-		$of_options[] = array( "name"	=> __( 'General', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'General', 'pixel-linear' ),
 			"type"	=> "heading", "icon" => ADMIN_IMAGES . "icon-settings.png"
 			);
 		
-		$of_options[] = array( "name"	=> __( 'Custom Ads', 'gents' ),
-			"desc"	=> __( '', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Custom Ads', 'pixel-linear' ),
+			"desc"	=> __( '', 'pixel-linear' ),
 			"id"	=> "custom_ads",
 			"std" 	=> "<h3 style=\"margin: 0 0 10px;\">Click on image to get themes</h3>
 						<a href='http://pixelthemestudio.ca/product/pixel-linear/' target='_blank'><img src='".ADMIN_IMAGES."new-ad.jpg' /></a> ",
 			"icon" 	=> true,
 			"type" 	=> "info");
         
-		$of_options[] = array( "name"	=> __( 'Favicon', 'gents' ),
-			"desc"	=> __( 'Upload or paste the URL for your custom favicon.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Favicon', 'pixel-linear' ),
+			"desc"	=> __( 'Upload or paste the URL for your custom favicon.', 'pixel-linear' ),
 			"id"	=> "custom_favicon",
 			"std"	=> "",
 			"type"	=> "media");
 	    
-		$of_options[] = array( "name"	=> __( 'Main Logo', 'gents' ),
-			"desc"	=> __( 'Use this field to upload your custom logo for use in the theme header. (Recommended 200px x 40px)', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Main Logo', 'pixel-linear' ),
+			"desc"	=> __( 'Use this field to upload your custom logo for use in the theme header. (Recommended 200px x 40px)', 'pixel-linear' ),
 			"id"	=> "custom_logo",
 			"std"	=> get_template_directory_uri()."/images/logo.png",
 			"mod"   => "",
 			"type"	=> "media",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Main Layout', 'gents' ),
-			"desc"	=> __( 'Select full width or Boxed layout for pages.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Main Layout', 'pixel-linear' ),
+			"desc"	=> __( 'Select full width or Boxed layout for pages.', 'pixel-linear' ),
 			"id"	=> "custom_main_layout",
 			"std"	=> "Boxed",
 			"type"	=> "select",
 			"options" => array("Full Width","Boxed"),
 			);
 		
-		$of_options[] = array( "name"	=> __( 'Blog Layout', 'gents' ),
-			"desc"	=> __('Select layout for Blog Page with left, right Sidebar. Use widgets to add contents on sidebars', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Blog Layout', 'pixel-linear' ),
+			"desc"	=> __('Select layout for Blog Page with left, right Sidebar. Use widgets to add contents on sidebars', 'pixel-linear' ),
 			"id"	=> "custom_blog_layout",
 			"std"	=> "No Sidebar",
 			"type"	=> "select",
 			"options" => array("No Sidebar" => "No Sidebar", "Left Sidebar" => "Left Sidebar","Right Sidebar" => "Right Sidebar","Left + Right Sidebar" => "Left + Right Sidebar"),
 			);
 		
-		$of_options[] = array( "name"	=> __( 'Single Post Layout', 'gents' ),
-			"desc"	=> __('Select layout for Single Post View with left, right Sidebar. Use widgets to add contents on sidebars', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Single Post Layout', 'pixel-linear' ),
+			"desc"	=> __('Select layout for Single Post View with left, right Sidebar. Use widgets to add contents on sidebars', 'pixel-linear' ),
 			"id"	=> "custom_single_post_layout",
 			"std"	=> "No Sidebar",
 			"type"	=> "select",
@@ -1489,32 +1489,32 @@ if (!function_exists('of_options'))
 		
 
 		// Home Settings
-		$of_options[] = array( "name"	=> __( 'Home Settings', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Home Settings', 'pixel-linear' ),
 			"type"	=> "heading");
 			
-		$of_options[] = array( "name"	=> __( 'Enable Slider', 'gents' ),
-			"desc"	=> __( 'Click on button to enable slider on homepage', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Enable Slider', 'pixel-linear' ),
+			"desc"	=> __( 'Click on button to enable slider on homepage', 'pixel-linear' ),
 			"id"	=> "enable_disable_slider",
 			"std" 		=> 0,
-			"on"	=> __( 'Enable', 'gents' ),
-			"off"	=> __( 'Disable', 'gents' ),
+			"on"	=> __( 'Enable', 'pixel-linear' ),
+			"off"	=> __( 'Disable', 'pixel-linear' ),
 			"type"	=> "switch",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Slider Options', 'gents' ),
-			"desc"	=> __( 'Unlimited slider with drag and drop sortings. (Recommended size xpx x ypx)', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Slider Options', 'pixel-linear' ),
+			"desc"	=> __( 'Unlimited slider with drag and drop sortings. (Recommended size xpx x ypx)', 'pixel-linear' ),
 			"id"	=> "custom_slider",
 			"std" 		=> "",
 			"type"	=> "slider",
 			);
 			
 		
-		$of_options[] = array( "name"	=> __( 'Enable 3 Boxes On Homepage', 'gents' ),
-			"desc"	=> __( 'Use widgets to add content in 3 boxes', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Enable 3 Boxes On Homepage', 'pixel-linear' ),
+			"desc"	=> __( 'Use widgets to add content in 3 boxes', 'pixel-linear' ),
 			"id"	=> "enable_disable_3box",
 			"std" 		=> 0,
-			"on"	=> __( 'Enable', 'gents' ),
-			"off"	=> __( 'Disable', 'gents' ),
+			"on"	=> __( 'Enable', 'pixel-linear' ),
+			"off"	=> __( 'Disable', 'pixel-linear' ),
 			"type"	=> "switch",
 			);
 			
@@ -1523,52 +1523,52 @@ if (!function_exists('of_options'))
 			
 	   
 	   // Styling Options
-		$of_options[] = array( "name"	=> __( 'Styling Options', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Styling Options', 'pixel-linear' ),
 			"type"	=> "heading");
 		
-		$of_options[] = array( "name"	=> __( 'Body Background Color', 'gents' ),
-			"desc"	=> __( 'Pick a background color for body<br>(default: #fff).', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Body Background Color', 'pixel-linear' ),
+			"desc"	=> __( 'Pick a background color for body<br>(default: #fff).', 'pixel-linear' ),
 			"id"	=> "custom_body_bg",
 			"std"	=> "#fff",
 			"type"	=> "color",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Header Background Color', 'gents' ),
-			"desc"	=> __( 'Pick a background color for header<br>(default: #fff).', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Header Background Color', 'pixel-linear' ),
+			"desc"	=> __( 'Pick a background color for header<br>(default: #fff).', 'pixel-linear' ),
 			"id"	=> "custom_header_bg",
 			"std"	=> "#fff",
 			"type"	=> "color",
 			);	
 			
-		$of_options[] = array( "name"	=> __( 'Footer Background Color', 'gents' ),
-			"desc"	=> __( 'Pick a background color for footer<br>(default: #333).', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Footer Background Color', 'pixel-linear' ),
+			"desc"	=> __( 'Pick a background color for footer<br>(default: #333).', 'pixel-linear' ),
 			"id"	=> "custom_footer_bg",
 			"std"	=> "#333",
 			"type"	=> "color",
 			);
 
-		$of_options[] = array( "name"	=> __( 'Footer Bottom Background Color', 'gents' ),
-			"desc"	=> __( 'Pick a background color for footer copyright<br>(default: #000).', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Footer Bottom Background Color', 'pixel-linear' ),
+			"desc"	=> __( 'Pick a background color for footer copyright<br>(default: #000).', 'pixel-linear' ),
 			"id"	=> "custom_bottom_footer_bg",
 			"std"	=> "#000",
 			"type"	=> "color",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Box Layout Background Color', 'gents' ),
-			"desc"	=> __( 'Pick a background color for box layout.<br>*Apply only when box layout is selected.(default: #ddd).', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Box Layout Background Color', 'pixel-linear' ),
+			"desc"	=> __( 'Pick a background color for box layout.<br>*Apply only when box layout is selected.(default: #ddd).', 'pixel-linear' ),
 			"id"	=> "custom_boxed_bg",
 			"std" => "#ddd",
 			"type"	=> "color");
 		
-		$of_options[] = array( "name"	=> __( 'Box Layout Background Image', 'gents' ),
-			"desc"	=> __( 'Pick a background image for box layout.<br>*Apply only when box layout is selected.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Box Layout Background Image', 'pixel-linear' ),
+			"desc"	=> __( 'Pick a background image for box layout.<br>*Apply only when box layout is selected.', 'pixel-linear' ),
 			"id"	=> "custom_boxed_bgImg",
 			"std"	=> "",
 			"type"	=> "media",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Custom CSS', 'gents' ),
-			"desc"	=> __( 'Quickly add some CSS to your theme by adding it to this block.<br> Use !important to override properties.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Custom CSS', 'pixel-linear' ),
+			"desc"	=> __( 'Quickly add some CSS to your theme by adding it to this block.<br> Use !important to override properties.', 'pixel-linear' ),
 			"id"	=> "custom_css_box",
 			"std"	=> "",
 			"type" 		=> "textarea",
@@ -1577,42 +1577,42 @@ if (!function_exists('of_options'))
 			
 			
 		// Typography
-		$of_options[] = array( "name"	=> __( 'Typography', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Typography', 'pixel-linear' ),
 			"type"	=> "heading", "icon" => ADMIN_IMAGES . "typography.png");
 		
-		$of_options[] = array( "name"	=> __( 'Body Font', 'gents' ),
-			"desc"	=> __( 'Specify the body font properties.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Body Font', 'pixel-linear' ),
+			"desc"	=> __( 'Specify the body font properties.', 'pixel-linear' ),
 			"id"	=> "custom_body_font",
 			"std"	=> array('size' => '16px','style' => 'normal','color' => '#000000'),
 			"type"	=> "typography",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Google Fonts', 'gents' ),
-			"desc"	=> __( '','gents' ),
+		$of_options[] = array( "name"	=> __( 'Google Fonts', 'pixel-linear' ),
+			"desc"	=> __( '','pixel-linear' ),
 			"id"	=> "google_fonts_intro",
 			"std" => "<h3 style='margin: 0;''>Google Fonts</h3>",
 			"icon" => true,
 			"type"	=> "info",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Select Body Font Family', 'gents' ),
-			"desc"	=> __( 'Select a font family for body text this will override Standard Font.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Select Body Font Family', 'pixel-linear' ),
+			"desc"	=> __( 'Select a font family for body text this will override Standard Font.', 'pixel-linear' ),
 			"id"	=> "custom_body_family",
 			"std"	=> "Select Font",
 			"type"	=> "select",
 			"options" => $google_fonts
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Select Heading Font', 'gents' ),
-			"desc"	=> __( 'Select a font family for headings', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Select Heading Font', 'pixel-linear' ),
+			"desc"	=> __( 'Select a font family for headings', 'pixel-linear' ),
 			"id"	=> "custom_heading_family",
 			"std" => "Select Font",
 			"type"	=> "select",
 			"options" => $google_fonts
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Select Footer Heading Font', 'gents' ),
-			"desc"	=> __( 'Select a font family for footer headings', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Select Footer Heading Font', 'pixel-linear' ),
+			"desc"	=> __( 'Select a font family for footer headings', 'pixel-linear' ),
 			"id"	=> "custom_footer_family",
 			"std" => "Select Font",
 			"type"	=> "select",
@@ -1622,84 +1622,84 @@ if (!function_exists('of_options'))
 			
 			
 		// Social Settings
-		$of_options[] = array( "name"	=> __( 'Social Settings', 'gents'),
+		$of_options[] = array( "name"	=> __( 'Social Settings', 'pixel-linear'),
 			"type"	=> "heading", "icon" => ADMIN_IMAGES . "social_setting.png");
 			
-		$of_options[] = array( "name"	=> __( 'Enable Social Icons', 'gents' ),
-			"desc"	=> __( 'Click on button to enable Social Icons at bottom', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Enable Social Icons', 'pixel-linear' ),
+			"desc"	=> __( 'Click on button to enable Social Icons at bottom', 'pixel-linear' ),
 			"id"	=> "enable_disable_sm",
 			"std"	=> '1',
-			"on"	=> __( 'Enable', 'gents' ),
-			"off"	=> __( 'Disable', 'gents' ),
+			"on"	=> __( 'Enable', 'pixel-linear' ),
+			"off"	=> __( 'Disable', 'pixel-linear' ),
 			"type"	=> "switch");
 			
-		$of_options[] = array( "name"	=> __( 'Social Icons', 'gents' ),
-			"desc"	=> __( '','gents' ),
+		$of_options[] = array( "name"	=> __( 'Social Icons', 'pixel-linear' ),
+			"desc"	=> __( '','pixel-linear' ),
 			"id"	=> "sco_ico_lbl",
 			"std" => "<h3 style=\"margin: 0 0 10px;\">Insert your social link to show the icon.</h3>",
 			"icon" => true,
 			"type"	=> "info",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Facebook', 'gents' ),
-			"desc"	=> __( 'Insert your custom link to show the Facebook icon. Leave blank to hide icon.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Facebook', 'pixel-linear' ),
+			"desc"	=> __( 'Insert your custom link to show the Facebook icon. Leave blank to hide icon.', 'pixel-linear' ),
 			"id"	=> "custom_facebook_link",
 			"std" => "http://www.facebook.com",
 			"type"	=> "text",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Twitter', 'gents' ),
-			"desc"	=> __( 'Insert your custom link to show the Twitter icon. Leave blank to hide icon.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Twitter', 'pixel-linear' ),
+			"desc"	=> __( 'Insert your custom link to show the Twitter icon. Leave blank to hide icon.', 'pixel-linear' ),
 			"id"	=> "custom_twitter_link",
 			"std" => "http://www.twitter.com",
 			"type"	=> "text",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Google+', 'gents' ),
-			"desc"	=> __( 'Insert your custom link to show the Google+ icon. Leave blank to hide icon.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Google+', 'pixel-linear' ),
+			"desc"	=> __( 'Insert your custom link to show the Google+ icon. Leave blank to hide icon.', 'pixel-linear' ),
 			"id"	=> "custom_Googlep_link",
 			"std" => "http://www.google.com",
 			"type"	=> "text",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Linkedin', 'gents' ),
-			"desc"	=> __( 'Insert your custom link to show the Linkedin icon. Leave blank to hide icon.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Linkedin', 'pixel-linear' ),
+			"desc"	=> __( 'Insert your custom link to show the Linkedin icon. Leave blank to hide icon.', 'pixel-linear' ),
 			"id"	=> "custom_linkedin_link",
 			"std" => "http://www.linkedin.com",
 			"type"	=> "text",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Instagram', 'gents' ),
-			"desc"	=> __( 'Insert your custom link to show the Instagram icon. Leave blank to hide icon.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Instagram', 'pixel-linear' ),
+			"desc"	=> __( 'Insert your custom link to show the Instagram icon. Leave blank to hide icon.', 'pixel-linear' ),
 			"id"	=> "custom_instagram_link",
 			"std" => "http://www.instagram.com",
 			"type"	=> "text",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Pinterest', 'gents' ),
-			"desc"	=> __( 'Insert your custom link to show the Pinterest icon. Leave blank to hide icon.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Pinterest', 'pixel-linear' ),
+			"desc"	=> __( 'Insert your custom link to show the Pinterest icon. Leave blank to hide icon.', 'pixel-linear' ),
 			"id"	=> "custom_pinterest_link",
 			"std" => "http://www.pinterest.com",
 			"type"	=> "text",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Reddit', 'gents' ),
-			"desc"	=> __( 'Insert your custom link to show the Reddit icon. Leave blank to hide icon.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Reddit', 'pixel-linear' ),
+			"desc"	=> __( 'Insert your custom link to show the Reddit icon. Leave blank to hide icon.', 'pixel-linear' ),
 			"id"	=> "custom_reddit_link",
 			"std" => "http://www.reddit.com",
 			"type"	=> "text",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Tumblr', 'gents' ),
-			"desc"	=> __( 'Insert your custom link to show the Tumblr icon. Leave blank to hide icon.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Tumblr', 'pixel-linear' ),
+			"desc"	=> __( 'Insert your custom link to show the Tumblr icon. Leave blank to hide icon.', 'pixel-linear' ),
 			"id"	=> "custom_tumblr_link",
 			"std" => "http://www.tumblr.com",
 			"type"	=> "text",
 			);
 		
 			
-		$of_options[] = array( "name"	=> __( 'Stumbleupon', 'gents' ),
-			"desc"	=> __( 'Insert your custom link to show the Stumbleupon icon. Leave blank to hide icon.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Stumbleupon', 'pixel-linear' ),
+			"desc"	=> __( 'Insert your custom link to show the Stumbleupon icon. Leave blank to hide icon.', 'pixel-linear' ),
 			"id"	=> "custom_stumbleupon_link",
 			"std" => "http://www.stumbleupon.com",
 			"type"	=> "text",
@@ -1712,18 +1712,18 @@ if (!function_exists('of_options'))
 	
 
 		//Footer Settings					
-		$of_options[] = array( "name"	=> __( 'Footer Settings', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Footer Settings', 'pixel-linear' ),
 			"type"	=> "heading", "icon" => ADMIN_IMAGES . "icon-footer.png");
 			
-		$of_options[] = array( "name"	=> __( 'Footer Logo', 'gents' ),
-			"desc"	=> __( 'Upload your footer logo here.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Footer Logo', 'pixel-linear' ),
+			"desc"	=> __( 'Upload your footer logo here.', 'pixel-linear' ),
 			"id"	=> "custom_footer_logo",
 			"std" => "",
 			"type"	=> "media",
 			);
 			
-		$of_options[] = array( "name"	=> __( 'Copyright Text', 'gents' ),
-			"desc"	=> __( 'Copyright information goes here','gents' ),
+		$of_options[] = array( "name"	=> __( 'Copyright Text', 'pixel-linear' ),
+			"desc"	=> __( 'Copyright information goes here','pixel-linear' ),
 			"id"	=> "custom_copy_info",
 			"std" => "Copyright &copy; 2015 Pixel Theme Studio. All rights reserved.",
 			"type"	=> "textarea",
@@ -1732,17 +1732,17 @@ if (!function_exists('of_options'))
 			
 			
 		//Tracking Code	
-	    $of_options[] = array( "name"	=> __( 'Tracking Code', 'gents' ),
+	    $of_options[] = array( "name"	=> __( 'Tracking Code', 'pixel-linear' ),
 			"type"	=> "heading", "icon" => ADMIN_IMAGES . "icon-tracking.png");
 
-		$of_options[] = array( "name"	=> __( 'Header Tracking Code', 'gents' ),
-			"desc"	=> __( 'Paste your Google Analytics (or other) tracking code here. This will be added into the header template of your theme.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Header Tracking Code', 'pixel-linear' ),
+			"desc"	=> __( 'Paste your Google Analytics (or other) tracking code here. This will be added into the header template of your theme.', 'pixel-linear' ),
 			"id"	=> "tracking_header",
 			"std"	=> "",
 			"type"	=> "textarea");    
 
-		$of_options[] = array( "name"	=> __( 'Footer Tracking Code', 'gents' ),
-			"desc"	=> __( 'Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme.', 'gents' ),
+		$of_options[] = array( "name"	=> __( 'Footer Tracking Code', 'pixel-linear' ),
+			"desc"	=> __( 'Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme.', 'pixel-linear' ),
 			"id"	=> "tracking_footer",
 			"std"	=> "",
 			"type"	=> "textarea");

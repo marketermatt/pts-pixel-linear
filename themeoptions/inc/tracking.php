@@ -127,18 +127,18 @@
                 $id    = '#wpadminbar';
                 $nonce = wp_create_nonce( 'redux_activate_tracking' );
 
-                $content = '<h3>' . __( 'Help improve Our Panel', 'redux-framework' ) . '</h3>';
-                $content .= '<p>' . __( 'Please helps us improve our panel by allowing us to gather anonymous usage stats so we know which configurations, plugins and themes to test to ensure compatibility.', 'redux-framework' ) . '</p>';
+                $content = '<h3>' . __( 'Help improve Our Panel', 'pixel-linear' ) . '</h3>';
+                $content .= '<p>' . __( 'Please helps us improve our panel by allowing us to gather anonymous usage stats so we know which configurations, plugins and themes to test to ensure compatibility.', 'pixel-linear' ) . '</p>';
                 $opt_arr = array(
                     'content'  => $content,
                     'position' => array( 'edge' => 'top', 'align' => 'center' )
                 );
-                $button2 = __( 'Allow tracking', 'redux-framework' );
+                $button2 = __( 'Allow tracking', 'pixel-linear' );
 
                 $function2 = 'redux_store_answer("yes","' . $nonce . '")';
                 $function1 = 'redux_store_answer("no","' . $nonce . '")';
 
-                $this->print_scripts( $id, $opt_arr, __( 'Do not allow tracking', 'redux-framework' ), $button2, $function2, $function1 );
+                $this->print_scripts( $id, $opt_arr, __( 'Do not allow tracking', 'pixel-linear' ), $button2, $function2, $function1 );
             }
 
             /**
@@ -149,13 +149,13 @@
                 $nonce = wp_create_nonce( 'redux_activate_tracking' );
 
 
-                $content = '<h3>' . __( 'Welcome to the Redux Demo Panel', 'redux-framework' ) . '</h3>';
-                $content .= '<p><strong>' . __( 'Getting Started', 'redux-framework' ) . '</strong><br>' . sprintf( __( 'This panel demonstrates the many features of Redux.  Before digging in, we suggest you get up to speed by reviewing %1$s.', 'redux-framework' ), '<a href="http://docs.reduxframework.com/redux-framework/getting-started/" target="_blank">' . __( 'our documentation', 'redux-framework' ) . '</a>' );
-                $content .= '<p><strong>' . __( 'Redux Generator', 'redux-framework' ) . '</strong><br>' . sprintf( __( 'Want to get a head start? Use the %1$s. It will create a customized boilerplate theme or a standalone admin folder complete with all things Redux (with the help of Underscores and TGM). Save yourself a headache and try it today.', 'redux-framework' ), '<a href="http://generate.reduxframework.com/" target="_blank">' . __( 'Redux Generator', 'redux-framework' ) . '</a>' );
-                $content .= '<p><strong>' . __( 'Redux Extensions', 'redux-framework' ) . '</strong><br>' . sprintf( __( 'Did you know we have extensions, which greatly enhance the features of Redux?  Visit our %1$s to learn more!', 'redux-framework' ), '<a href="http://reduxframework.com/extensions/" target="_blank">' . __( 'extensions directory', 'redux-framework' ) . '</a>' );
-                $content .= '<p><strong>' . __( 'Like Redux?', 'redux-framework' ) . '</strong><br>' . sprintf( __( 'If so, please %1$s and consider making a %2$s to keep development of Redux moving forward.', 'redux-framework' ), '<a target="_blank" href="http://wordpress.org/support/view/plugin-reviews/redux-framework">' . __( 'leave us a favorable review on WordPress.org', 'redux-framework' ) . '</a>', '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=admin-folder-xclick&hosted_button_id=N5AD7TSH8YA5U" target="_blank">' . __( 'donation', 'redux-framework' ) . '</a>' );
-                $content .= '<p><strong>' . __( 'Newsletter', 'redux-framework' ) . '</strong><br>' . __( 'If you\'d like to keep up to with all things Redux, please subscribe to our newsletter', 'redux-framework' ) . ':</p>';
-                $content .= '<form action="http://reduxframework.us7.list-manage2.com/subscribe/post?u=564f5178f6cc288064f332efd&amp;id=ace5bbc1f9&SOURCE=panel" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><p style="text-align: center;"><label for="mce-EMAIL">' . __( 'Email address', 'redux-framework' ) . ' </label><input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"><input type="hidden" value="panel" name="SOURCE">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="' . __( 'Subscribe', 'redux-framework' ) . '" name="subscribe" id="mc-embedded-subscribe" class="button button-primary"></p></form>';
+                $content = '<h3>' . __( 'Welcome to the Redux Demo Panel', 'pixel-linear' ) . '</h3>';
+                $content .= '<p><strong>' . __( 'Getting Started', 'pixel-linear' ) . '</strong><br>' . sprintf( __( 'This panel demonstrates the many features of Redux.  Before digging in, we suggest you get up to speed by reviewing %1$s.', 'pixel-linear' ), '<a href="http://docs.reduxframework.com/redux-framework/getting-started/" target="_blank">' . __( 'our documentation', 'pixel-linear' ) . '</a>' );
+                $content .= '<p><strong>' . __( 'Redux Generator', 'pixel-linear' ) . '</strong><br>' . sprintf( __( 'Want to get a head start? Use the %1$s. It will create a customized boilerplate theme or a standalone admin folder complete with all things Redux (with the help of Underscores and TGM). Save yourself a headache and try it today.', 'pixel-linear' ), '<a href="http://generate.reduxframework.com/" target="_blank">' . __( 'Redux Generator', 'pixel-linear' ) . '</a>' );
+                $content .= '<p><strong>' . __( 'Redux Extensions', 'pixel-linear' ) . '</strong><br>' . sprintf( __( 'Did you know we have extensions, which greatly enhance the features of Redux?  Visit our %1$s to learn more!', 'pixel-linear' ), '<a href="http://reduxframework.com/extensions/" target="_blank">' . __( 'extensions directory', 'pixel-linear' ) . '</a>' );
+                $content .= '<p><strong>' . __( 'Like Redux?', 'pixel-linear' ) . '</strong><br>' . sprintf( __( 'If so, please %1$s and consider making a %2$s to keep development of Redux moving forward.', 'pixel-linear' ), '<a target="_blank" href="http://wordpress.org/support/view/plugin-reviews/redux-framework">' . __( 'leave us a favorable review on WordPress.org', 'pixel-linear' ) . '</a>', '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=admin-folder-xclick&hosted_button_id=N5AD7TSH8YA5U" target="_blank">' . __( 'donation', 'pixel-linear' ) . '</a>' );
+                $content .= '<p><strong>' . __( 'Newsletter', 'pixel-linear' ) . '</strong><br>' . __( 'If you\'d like to keep up to with all things Redux, please subscribe to our newsletter', 'pixel-linear' ) . ':</p>';
+                $content .= '<form action="http://reduxframework.us7.list-manage2.com/subscribe/post?u=564f5178f6cc288064f332efd&amp;id=ace5bbc1f9&SOURCE=panel" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><p style="text-align: center;"><label for="mce-EMAIL">' . __( 'Email address', 'pixel-linear' ) . ' </label><input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"><input type="hidden" value="panel" name="SOURCE">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="' . __( 'Subscribe', 'pixel-linear' ) . '" name="subscribe" id="mc-embedded-subscribe" class="button button-primary"></p></form>';
                 $opt_arr = array(
                     'content'      => $content,
                     'position'     => array( 'edge' => 'top', 'align' => 'center' ),
@@ -164,7 +164,7 @@
 
                 $function1 = 'redux_store_answer("tour","' . $nonce . '")';
 
-                $this->print_scripts( $id, $opt_arr, __( 'Close', 'redux-framework' ), false, '', $function1 );
+                $this->print_scripts( $id, $opt_arr, __( 'Close', 'pixel-linear' ), false, '', $function1 );
             }
 
             /**
@@ -339,7 +339,7 @@
                     ),
                     'options'   => apply_filters( 'redux/tracking/options', array() ),
                     'theme'     => $theme,
-                    'redux'     => array(
+                    'pixel-linear'     => array(
                         'mode'      => ReduxFramework::$_is_plugin ? 'plugin' : 'theme',
                         'version'   => ReduxFramework::$_version,
                         'demo_mode' => get_option( 'ReduxFrameworkPlugin' ),
@@ -463,7 +463,7 @@
         function redux_tracking_additions( $options ) {
             $opt = array();
 
-            $options['redux'] = array(
+            $options['pixel-linear'] = array(
                 'demo_mode' => get_option( 'ReduxFrameworkPlugin' ),
             );
 

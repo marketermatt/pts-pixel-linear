@@ -50,7 +50,7 @@ if (!function_exists('gents_setup')):
 
          */
 
-	    load_theme_textdomain('gents', get_template_directory().'/languages');
+	    load_theme_textdomain('pixel-linear', get_template_directory().'/languages');
 
 
 
@@ -250,7 +250,7 @@ add_filter('excerpt_length', 'gents_excerpt_length');
 
 function gents_read_more() {
 
-    return ' <a href="' . get_permalink() . '">' . __('<div class="read-more"><p>Read more &#8250;</p></div><!-- end of .read-more -->', 'gents') . '</a>';
+    return ' <a href="' . get_permalink() . '">' . __('<div class="read-more"><p>Read more &#8250;</p></div><!-- end of .read-more -->', 'pixel-linear') . '</a>';
 
 }
 
@@ -388,7 +388,7 @@ function gents_breadcrumb_lists() {
 
     $chevron = '<span class="divider">/</span>';
 
-    $name = __('Home','gents'); //text for the 'Home' link
+    $name = __('Home','pixel-linear'); //text for the 'Home' link
 
     $currentBefore = '<li class="active">';
 
@@ -506,11 +506,11 @@ function gents_breadcrumb_lists() {
 
     } elseif (is_search()) {
 
-        echo $currentBefore . __('Search results for &#39;','gents') . get_search_query() . __('&#39;','gents') . $currentAfter;
+        echo $currentBefore . __('Search results for &#39;','pixel-linear') . get_search_query() . __('&#39;','pixel-linear') . $currentAfter;
 
     } elseif (is_tag()) {
 
-        echo $currentBefore . __('Posts tagged &#39;','gents');
+        echo $currentBefore . __('Posts tagged &#39;','pixel-linear');
 
         single_tag_title();
 
@@ -522,11 +522,11 @@ function gents_breadcrumb_lists() {
 
         $userdata = get_userdata($author);
 
-        echo $currentBefore . __('Articles posted by ','gents') . $userdata->display_name . $currentAfter;
+        echo $currentBefore . __('Articles posted by ','pixel-linear') . $userdata->display_name . $currentAfter;
 
     } elseif (is_404()) {
 
-        echo $currentBefore . __('Error 404','gents') . $currentAfter;
+        echo $currentBefore . __('Error 404','pixel-linear') . $currentAfter;
 
     }
 
@@ -538,7 +538,7 @@ function gents_breadcrumb_lists() {
 
             echo ' (';
 
-        echo __('Page','gents') . ' ' . get_query_var('paged');
+        echo __('Page','pixel-linear') . ' ' . get_query_var('paged');
 
         if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author())
 
@@ -626,7 +626,7 @@ function gents_breadcrumb_lists() {
 
         if ($title == '') {
 
-            return __('Untitled','gents');
+            return __('Untitled','pixel-linear');
 
         } else {
 
@@ -649,9 +649,9 @@ function gents_breadcrumb_lists() {
 		
 		 register_sidebar(array(
 
-            'name' => __('Left Sidebar', 'gents'),
+            'name' => __('Left Sidebar', 'pixel-linear'),
 
-            'description' => __('Left Sidebar Contents', 'gents'),
+            'description' => __('Left Sidebar Contents', 'pixel-linear'),
 
             'id' => 'left-sidebar',
 
@@ -667,9 +667,9 @@ function gents_breadcrumb_lists() {
 		
 		 register_sidebar(array(
 
-            'name' => __('Right Sidebar', 'gents'),
+            'name' => __('Right Sidebar', 'pixel-linear'),
 
-            'description' => __('Right Sidebar Contents', 'gents'),
+            'description' => __('Right Sidebar Contents', 'pixel-linear'),
 
             'id' => 'right-sidebar',
 
@@ -688,9 +688,9 @@ function gents_breadcrumb_lists() {
 
           register_sidebar(array(
 
-            'name' => __('Footer Column 1', 'gents'),
+            'name' => __('Footer Column 1', 'pixel-linear'),
 
-            'description' => __('footer.php', 'gents'),
+            'description' => __('footer.php', 'pixel-linear'),
 
             'id' => 'footer-col1',
 
@@ -708,9 +708,9 @@ function gents_breadcrumb_lists() {
 
           register_sidebar(array(
 
-            'name' => __('Footer Column 2', 'gents'),
+            'name' => __('Footer Column 2', 'pixel-linear'),
 
-            'description' => __('footer.php', 'gents'),
+            'description' => __('footer.php', 'pixel-linear'),
 
             'id' => 'footer-col2',
 
@@ -728,9 +728,9 @@ function gents_breadcrumb_lists() {
 
          register_sidebar(array(
 
-            'name' => __('Footer Column 3', 'gents'),
+            'name' => __('Footer Column 3', 'pixel-linear'),
 
-            'description' => __('footer.php', 'gents'),
+            'description' => __('footer.php', 'pixel-linear'),
 
             'id' => 'footer-col3',
 
@@ -747,9 +747,9 @@ function gents_breadcrumb_lists() {
 		
 		register_sidebar(array(
 
-            'name' => __('Footer Column 4', 'gents'),
+            'name' => __('Footer Column 4', 'pixel-linear'),
 
-            'description' => __('footer.php', 'gents'),
+            'description' => __('footer.php', 'pixel-linear'),
 
             'id' => 'footer-col4',
 
@@ -766,8 +766,8 @@ function gents_breadcrumb_lists() {
 		
 		
 		register_sidebar(array(
-            'name' => __('Box One', 'gents'),
-            'description' => __('Three Box Content', 'gents'),
+            'name' => __('Box One', 'pixel-linear'),
+            'description' => __('Three Box Content', 'pixel-linear'),
             'id' => 'box-1',
             'before_title' => '<div class="box-title"><h3>',
             'after_title' => '</h3></div>',
@@ -776,8 +776,8 @@ function gents_breadcrumb_lists() {
         ));
 		
 		register_sidebar(array(
-            'name' => __('Box Two', 'gents'),
-            'description' => __('Three Box Content', 'gents'),
+            'name' => __('Box Two', 'pixel-linear'),
+            'description' => __('Three Box Content', 'pixel-linear'),
             'id' => 'box-2',
             'before_title' => '<div class="box-title"><h3>',
             'after_title' => '</h3></div>',
@@ -786,8 +786,8 @@ function gents_breadcrumb_lists() {
         ));
 		
 		register_sidebar(array(
-            'name' => __('Box Three', 'gents'),
-            'description' => __('Three Box Content', 'gents'),
+            'name' => __('Box Three', 'pixel-linear'),
+            'description' => __('Three Box Content', 'pixel-linear'),
             'id' => 'box-3',
             'before_title' => '<div class="box-title"><h3>',
             'after_title' => '</h3></div>',

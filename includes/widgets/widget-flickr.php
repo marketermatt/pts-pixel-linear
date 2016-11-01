@@ -19,11 +19,11 @@ class azkaban_Flickr extends WP_Widget {
 	// constructor...
 	function azkaban_Flickr() {
 		$widget_ops = array( 	'classname' => 'azkaban-flickr', 
-								'description' => __('A simple Flickr photo stream widget', 'azkaban')
+								'description' => __('A simple Flickr photo stream widget', 'pixel-linear')
 		);
 
 		$control_ops = array( 'width' => 200, 'height' => 350, 'id_base' => 'azkaban-flickr-widget' );
-		$this->WP_Widget('azkaban-flickr-widget', __('Azkaban: Flickr Widget', 'azkaban'), $widget_ops, $control_ops);
+		$this->WP_Widget('azkaban-flickr-widget', __('Azkaban: Flickr Widget', 'pixel-linear'), $widget_ops, $control_ops);
 
 }
 
@@ -76,11 +76,11 @@ class azkaban_Flickr extends WP_Widget {
 	?>
 		<!-- widget title -->
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'azkaban'); ?></label>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'pixel-linear'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $instance['title']; ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('flickrid'); ?>"><?php _e('Your Flickr User ID:', 'azkaban'); ?></label>
+			<label for="<?php echo $this->get_field_id('flickrid'); ?>"><?php _e('Your Flickr User ID:', 'pixel-linear'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('flickrid'); ?>" name="<?php echo $this->get_field_name('flickrid'); ?>" value="<?php echo $instance['flickrid']; ?>" />
 	 		<small>Don't know your ID? Head on over to <a href="http://idgettr.com">idgettr</a> to find it.</small>
 	 </p>

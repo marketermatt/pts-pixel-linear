@@ -18,8 +18,8 @@ function recentthumbnailposts_load_widgets() {
 class azkaban_Recent_Posts_Thumbnails extends WP_Widget {
 
 	function azkaban_Recent_Posts_Thumbnails() {
-		$widget_ops = array('classname' => 'widget_recent_entries', 'description' => __( "The most recent posts with thumbnails on your blog", "azkaban") );
-		$this->WP_Widget('recent-posts', __('Azkaban: Latest Posts with Thumbnails', 'azkaban'), $widget_ops);
+		$widget_ops = array('classname' => 'widget_recent_entries', 'description' => __( "The most recent posts with thumbnails on your blog", 'pixel-linear') );
+		$this->WP_Widget('recent-posts', __('Azkaban: Latest Posts with Thumbnails', 'pixel-linear'), $widget_ops);
 		$this->alt_option_name = 'widget_recent_entries';
 
 		add_action( 'save_post', array(&$this, 'flush_widget_cache') );
@@ -41,7 +41,7 @@ class azkaban_Recent_Posts_Thumbnails extends WP_Widget {
 		ob_start();
 		extract($args);
 
-		$title = apply_filters('widget_title', empty($instance['title']) ? __('Recent Posts', 'azkaban') : $instance['title']);
+		$title = apply_filters('widget_title', empty($instance['title']) ? __('Recent Posts', 'pixel-linear') : $instance['title']);
 		if ( !$number = (int) $instance['number'] )
 			$number = 10;
 		else if ( $number < 1 )
@@ -99,12 +99,12 @@ class azkaban_Recent_Posts_Thumbnails extends WP_Widget {
 		if ( !isset($instance['number']) || !$number = (int) $instance['number'] )
 			$number = 5;
 ?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'azkaban'); ?></label>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'pixel-linear'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-		<p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts to show:', 'azkaban'); ?></label>
+		<p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts to show:', 'pixel-linear'); ?></label>
 		<input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3" /><br />
-		<small><?php _e('(at most 15)', 'azkaban'); ?></small></p>
+		<small><?php _e('(at most 15)', 'pixel-linear'); ?></small></p>
 <?php
 	}
 }

@@ -102,10 +102,10 @@ class NK_Latest_Tweets extends WP_Widget {
 		                    if($update) {
                                 $time = strtotime($item->created_at);
                             if ( ( abs( time() - $time) ) < 86400 )
-                                $h_time = sprintf( __('%s ago', 'azkaban'), human_time_diff( $time ) );
+                                $h_time = sprintf( __('%s ago', 'pixel-linear'), human_time_diff( $time ) );
                             else
-                                $h_time = date(__('Y/m/d', 'azkaban'), $time);
-                            echo sprintf( __('%s', 'azkaban'),' <small class="az-timestamp"><abbr title="' . date(__('Y/m/d H:i:s', 'azkaban'), $time) . '">' . $h_time . '</abbr></small>' );
+                                $h_time = date(__('Y/m/d', 'pixel-linear'), $time);
+                            echo sprintf( __('%s', 'pixel-linear'),' <small class="az-timestamp"><abbr title="' . date(__('Y/m/d H:i:s', 'pixel-linear'), $time) . '">' . $h_time . '</abbr></small>' );
                             }
                             echo '</li>';
 		                    $i++;
@@ -146,7 +146,7 @@ class NK_Latest_Tweets extends WP_Widget {
 
 	function form( $instance ) {
 	   
-		$defaults = array( 'title' =>__('Recent Tweets' , 'azkaban') , 'no_of_tweets' => '5' );
+		$defaults = array( 'title' =>__('Recent Tweets' , 'pixel-linear') , 'no_of_tweets' => '5' );
 		$instance = wp_parse_args( (array) $instance, $defaults ); 
 		
 		$twitter_username 		= isset($instance['twitter_username']) ? esc_attr($instance['twitter_username']) : '';

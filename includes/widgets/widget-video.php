@@ -50,12 +50,12 @@ class video_widget extends WP_Widget {
         $message	= esc_attr($instance['message']);
         ?>
          <p>
-          <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'azkaban'); ?></label> 
-          <input class="widefat" id="<?php echo $this->get_field_id('title', 'azkaban'); ?>" name="<?php echo $this->get_field_name('title', 'azkaban'); ?>" type="text" value="<?php echo $title; ?>" />
+          <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'pixel-linear'); ?></label> 
+          <input class="widefat" id="<?php echo $this->get_field_id('title', 'pixel-linear'); ?>" name="<?php echo $this->get_field_name('title', 'pixel-linear'); ?>" type="text" value="<?php echo $title; ?>" />
         </p>
 		<p>
           <label for="<?php echo $this->get_field_id('message'); ?>">Video Embed Code</label> 
-          <input class="widefat" id="<?php echo $this->get_field_id('message' , 'azkaban'); ?>" name="<?php echo $this->get_field_name('message' , 'azkaban'); ?>" type="text" value="<?php echo $message; ?>" />
+          <input class="widefat" id="<?php echo $this->get_field_id('message' , 'pixel-linear'); ?>" name="<?php echo $this->get_field_name('message' , 'pixel-linear'); ?>" type="text" value="<?php echo $message; ?>" />
         </p>
         <?php 
     }

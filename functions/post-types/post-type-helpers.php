@@ -12,7 +12,7 @@ function bi_posttype_cats($post_type) {
 	
 	$post_type_cats = array();
 	$post_type_cats_obj = get_terms( $post_type .'_cats' );
-	$post_type_cats[''] = __('All','gents');
+	$post_type_cats[''] = __('All','pixel-linear');
 	foreach ( $post_type_cats_obj as $post_type_cat ) {
 		$post_type_cats[$post_type_cat->term_id] = $post_type_cat->name;
 	}

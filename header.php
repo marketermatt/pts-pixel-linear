@@ -254,7 +254,7 @@ header .navbar-inverse{
         	<form role="search" method="get" id="searchform" class="input-group" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <input class="form-control" type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Search for...">
                 <span class="input-group-btn">
-                    <input class="btn btn-default fa fa-input" type="submit"  id="searchsubmit" value="<?php echo esc_attr_x( '&#xf002;', 'submit button' ); ?>" />
+                    <input class="btn btn-default fa fa-input" type="submit"  id="searchsubmit" value="<?php echo esc_attr_x( '&#xf002;', 'submit button','pixel-linear' ); ?>" />
               	</span>
             </form><!-- /input-group -->
             

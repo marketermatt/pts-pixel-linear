@@ -6,13 +6,13 @@ Description: Main Stylesheet for Pixel-Linear with all the Twitter Bootstrap ele
 Author: Pixel Theme Studio
 Author URI: http://pixelthemestudio.ca
 Version: 1.0.0
-Tags: white, black, gray, light, custom-menu, custom-header, custom-background, one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, theme-options, threaded-comments, full-width-template, sticky-post, translation-ready, fixed-layout
+Tags: custom-menu, custom-header, custom-background, one-column, two-columns, left-sidebar, right-sidebar, theme-options, threaded-comments, full-width-template, sticky-post, translation-ready
 
 License: GNU General Public License, version 3 (GPLv3)
 License URI: license.txt
 
 CSS Rules: Sorted alphabetically for better organization.
-Text Domain: azkaban
+Text Domain: pixel-linear
 
 */
 
@@ -130,6 +130,14 @@ hr {
 
 }
 
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
 
 
 

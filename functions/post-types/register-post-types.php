@@ -17,7 +17,7 @@ if ( !function_exists('bi_create_post_types') ) {
 		/*
 	
 		$portfolio_slug = ( bi_get_data('portfolio_post_type_slug') ) ? bi_get_data('portfolio_post_type_slug') : 'portfolio';
-		$portfolio_post_type_name = ( bi_get_data('portfolio_post_type_name') ) ? bi_get_data('portfolio_post_type_name') : __('Portfolio','gents');
+		$portfolio_post_type_name = ( bi_get_data('portfolio_post_type_name') ) ? bi_get_data('portfolio_post_type_name') : __('Portfolio','pixel-linear');
 		$portfolio_labels = array( 'name' => $portfolio_post_type_name );
 		
 		register_post_type( 'Portfolio',
